@@ -1,0 +1,80 @@
+{
+  "bounds_results": [
+    {
+      "lat": 27.738703,
+      "lon": 85.336205,
+      "uid": 9468,
+      "aqi": "63",
+      "station": {
+        "name": "US Embassy, Kathmandu, Nepal",
+        "time": "2026-03-16T03:15:00+09:00"
+      }
+    },
+    {
+      "lat": 27.673762,
+      "lon": 85.417528,
+      "uid": 10493,
+      "aqi": "161",
+      "station": {
+        "name": "Birendra School, Bhaktapur, Nepal",
+        "time": "2026-03-16T03:53:00+09:00"
+      }
+    },
+    {
+      "lat": 27.65311,
+      "lon": 85.302252,
+      "uid": 10495,
+      "aqi": "121",
+      "station": {
+        "name": "Bhaisipati, KTM, Nepal",
+        "time": "2026-03-16T03:57:00+09:00"
+      }
+    },
+    {
+      "lat": 27.681719,
+      "lon": 85.289313,
+      "uid": 13592,
+      "aqi": "88",
+      "station": {
+        "name": "TU Kritipur, Nepal",
+        "time": "2026-03-16T03:54:00+09:00"
+      }
+    },
+    {
+      "lat": 27.732825,
+      "lon": 85.342826,
+      "uid": 14866,
+      "aqi": "69",
+      "station": {
+        "name": "Shankapark, Nepal",
+        "time": "2026-03-16T03:59:00+09:00"
+      }
+    },
+    {
+      "lat": 27.64665,
+      "lon": 85.3234,
+      "uid": 14868,
+      "aqi": "73",
+      "station": {
+        "name": "Khumaltar, Nepal",
+        "time": "2026-03-16T03:56:00+09:00"
+      }
+    }
+  ],
+  "feeds_by_uid": {
+    "9468": {},
+    "10493": {},
+    "10495": {},
+    "13592": {},
+    "14866": {},
+    "14868": {}
+  },
+  "feed_notes": {
+    "9468": "feed unavailable (can not connect)",
+    "10493": "feed unavailable (can not connect)",
+    "10495": "feed unavailable (can not connect)",
+    "13592": "feed unavailable (can not connect)",
+    "14866": "feed unavailable (can not connect)",
+    "14868": "feed unavailable (can not connect)"
+  }
+}

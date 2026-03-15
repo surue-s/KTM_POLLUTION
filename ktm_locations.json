@@ -1,0 +1,5638 @@
+{
+  "locations": {
+    "meta": {
+      "name": "openaq-api",
+      "website": "/",
+      "page": 1,
+      "limit": 50,
+      "found": ">50"
+    },
+    "results": [
+      {
+        "id": 3459,
+        "name": "Embassy Kathmandu",
+        "locality": "N/A",
+        "timezone": "Asia/Kathmandu",
+        "country": {
+          "id": 145,
+          "code": "NP",
+          "name": "Nepal"
+        },
+        "owner": {
+          "id": 4,
+          "name": "Unknown Governmental Organization"
+        },
+        "provider": {
+          "id": 119,
+          "name": "AirNow"
+        },
+        "isMobile": false,
+        "isMonitor": true,
+        "instruments": [
+          {
+            "id": 2,
+            "name": "Government Monitor"
+          }
+        ],
+        "sensors": [
+          {
+            "id": 7713,
+            "name": "o3 ppm",
+            "parameter": {
+              "id": 10,
+              "name": "o3",
+              "units": "ppm",
+              "displayName": "O₃"
+            }
+          },
+          {
+            "id": 7710,
+            "name": "pm25 µg/m³",
+            "parameter": {
+              "id": 2,
+              "name": "pm25",
+              "units": "µg/m³",
+              "displayName": "PM2.5"
+            }
+          }
+        ],
+        "coordinates": {
+          "latitude": 27.738703,
+          "longitude": 85.336206
+        },
+        "licenses": [
+          {
+            "id": 33,
+            "name": "US Public Domain",
+            "attribution": {
+              "name": "Unknown Governmental Organization",
+              "url": null
+            },
+            "dateFrom": "2016-01-30",
+            "dateTo": null
+          }
+        ],
+        "bounds": [
+          85.336206,
+          27.738703,
+          85.336206,
+          27.738703
+        ],
+        "distance": null,
+        "datetimeFirst": {
+          "utc": "2017-03-03T00:00:00Z",
+          "local": "2017-03-03T05:45:00+05:45"
+        },
+        "datetimeLast": {
+          "utc": "2026-03-15T18:15:00Z",
+          "local": "2026-03-16T00:00:00+05:45"
+        }
+      },
+      {
+        "id": 3460,
+        "name": "Phora Durbar Kathman",
+        "locality": "N/A",
+        "timezone": "Asia/Kathmandu",
+        "country": {
+          "id": 145,
+          "code": "NP",
+          "name": "Nepal"
+        },
+        "owner": {
+          "id": 4,
+          "name": "Unknown Governmental Organization"
+        },
+        "provider": {
+          "id": 119,
+          "name": "AirNow"
+        },
+        "isMobile": false,
+        "isMonitor": true,
+        "instruments": [
+          {
+            "id": 2,
+            "name": "Government Monitor"
+          }
+        ],
+        "sensors": [
+          {
+            "id": 7712,
+            "name": "o3 ppm",
+            "parameter": {
+              "id": 10,
+              "name": "o3",
+              "units": "ppm",
+              "displayName": "O₃"
+            }
+          },
+          {
+            "id": 7711,
+            "name": "pm25 µg/m³",
+            "parameter": {
+              "id": 2,
+              "name": "pm25",
+              "units": "µg/m³",
+              "displayName": "PM2.5"
+            }
+          }
+        ],
+        "coordinates": {
+          "latitude": 27.712464,
+          "longitude": 85.315703
+        },
+        "licenses": [
+          {
+            "id": 33,
+            "name": "US Public Domain",
+            "attribution": {
+              "name": "Unknown Governmental Organization",
+              "url": null
+            },
+            "dateFrom": "2016-01-30",
+            "dateTo": null
+          }
+        ],
+        "bounds": [
+          85.315703,
+          27.712464,
+          85.315703,
+          27.712464
+        ],
+        "distance": null,
+        "datetimeFirst": {
+          "utc": "2017-03-03T00:00:00Z",
+          "local": "2017-03-03T05:45:00+05:45"
+        },
+        "datetimeLast": {
+          "utc": "2025-03-24T14:15:00Z",
+          "local": "2025-03-24T20:00:00+05:45"
+        }
+      },
+      {
+        "id": 1236017,
+        "name": "Dhathutole, Handigaun",
+        "locality": null,
+        "timezone": "Asia/Kathmandu",
+        "country": {
+          "id": 145,
+          "code": "NP",
+          "name": "Nepal"
+        },
+        "owner": {
+          "id": 4,
+          "name": "Unknown Governmental Organization"
+        },
+        "provider": {
+          "id": 66,
+          "name": "AirGradient"
+        },
+        "isMobile": false,
+        "isMonitor": false,
+        "instruments": [
+          {
+            "id": 7,
+            "name": "Unknown AirGradient Sensor"
+          }
+        ],
+        "sensors": [
+          {
+            "id": 8462455,
+            "name": "pm1 µg/m³",
+            "parameter": {
+              "id": 19,
+              "name": "pm1",
+              "units": "µg/m³",
+              "displayName": "PM1"
+            }
+          },
+          {
+            "id": 8462426,
+            "name": "pm10 µg/m³",
+            "parameter": {
+              "id": 1,
+              "name": "pm10",
+              "units": "µg/m³",
+              "displayName": "PM10"
+            }
+          },
+          {
+            "id": 6530219,
+            "name": "pm25 µg/m³",
+            "parameter": {
+              "id": 2,
+              "name": "pm25",
+              "units": "µg/m³",
+              "displayName": "PM2.5"
+            }
+          },
+          {
+            "id": 8462440,
+            "name": "relativehumidity %",
+            "parameter": {
+              "id": 98,
+              "name": "relativehumidity",
+              "units": "%",
+              "displayName": "RH"
+            }
+          },
+          {
+            "id": 6530213,
+            "name": "temperature c",
+            "parameter": {
+              "id": 100,
+              "name": "temperature",
+              "units": "c",
+              "displayName": "Temperature (C)"
+            }
+          },
+          {
+            "id": 8462430,
+            "name": "um003 particles/cm³",
+            "parameter": {
+              "id": 125,
+              "name": "um003",
+              "units": "particles/cm³",
+              "displayName": "PM0.3 count"
+            }
+          }
+        ],
+        "coordinates": {
+          "latitude": 27.727502,
+          "longitude": 85.330135
+        },
+        "licenses": [
+          {
+            "id": 41,
+            "name": "CC BY 4.0",
+            "attribution": {
+              "name": "Unknown Governmental Organization",
+              "url": null
+            },
+            "dateFrom": "2023-07-15",
+            "dateTo": null
+          }
+        ],
+        "bounds": [
+          85.330135,
+          27.727502,
+          85.330135,
+          27.727502
+        ],
+        "distance": null,
+        "datetimeFirst": {
+          "utc": "2023-07-15T13:00:00Z",
+          "local": "2023-07-15T18:45:00+05:45"
+        },
+        "datetimeLast": {
+          "utc": "2025-01-13T23:00:00Z",
+          "local": "2025-01-14T04:45:00+05:45"
+        }
+      },
+      {
+        "id": 2848864,
+        "name": "Dabali, Handigaun",
+        "locality": null,
+        "timezone": "Asia/Kathmandu",
+        "country": {
+          "id": 145,
+          "code": "NP",
+          "name": "Nepal"
+        },
+        "owner": {
+          "id": 11509,
+          "name": "Unknown Person"
+        },
+        "provider": {
+          "id": 66,
+          "name": "AirGradient"
+        },
+        "isMobile": false,
+        "isMonitor": false,
+        "instruments": [
+          {
+            "id": 7,
+            "name": "Unknown AirGradient Sensor"
+          }
+        ],
+        "sensors": [
+          {
+            "id": 9235744,
+            "name": "pm1 µg/m³",
+            "parameter": {
+              "id": 19,
+              "name": "pm1",
+              "units": "µg/m³",
+              "displayName": "PM1"
+            }
+          },
+          {
+            "id": 9235741,
+            "name": "pm10 µg/m³",
+            "parameter": {
+              "id": 1,
+              "name": "pm10",
+              "units": "µg/m³",
+              "displayName": "PM10"
+            }
+          },
+          {
+            "id": 9235746,
+            "name": "pm25 µg/m³",
+            "parameter": {
+              "id": 2,
+              "name": "pm25",
+              "units": "µg/m³",
+              "displayName": "PM2.5"
+            }
+          },
+          {
+            "id": 9235742,
+            "name": "relativehumidity %",
+            "parameter": {
+              "id": 98,
+              "name": "relativehumidity",
+              "units": "%",
+              "displayName": "RH"
+            }
+          },
+          {
+            "id": 9235745,
+            "name": "temperature c",
+            "parameter": {
+              "id": 100,
+              "name": "temperature",
+              "units": "c",
+              "displayName": "Temperature (C)"
+            }
+          },
+          {
+            "id": 9235734,
+            "name": "um003 particles/cm³",
+            "parameter": {
+              "id": 125,
+              "name": "um003",
+              "units": "particles/cm³",
+              "displayName": "PM0.3 count"
+            }
+          }
+        ],
+        "coordinates": {
+          "latitude": 27.68189114,
+          "longitude": 85.28707804
+        },
+        "licenses": [
+          {
+            "id": 41,
+            "name": "CC BY 4.0",
+            "attribution": {
+              "name": "Unknown Person",
+              "url": null
+            },
+            "dateFrom": "2023-07-15",
+            "dateTo": null
+          }
+        ],
+        "bounds": [
+          85.28707804,
+          27.68189114,
+          85.28707804,
+          27.68189114
+        ],
+        "distance": null,
+        "datetimeFirst": {
+          "utc": "2024-05-16T03:00:00Z",
+          "local": "2024-05-16T08:45:00+05:45"
+        },
+        "datetimeLast": {
+          "utc": "2026-03-15T18:00:00Z",
+          "local": "2026-03-15T23:45:00+05:45"
+        }
+      },
+      {
+        "id": 5506835,
+        "name": "Gaushala Chowk (SC-01) - GD Labs",
+        "locality": null,
+        "timezone": "Asia/Kathmandu",
+        "country": {
+          "id": 145,
+          "code": "NP",
+          "name": "Nepal"
+        },
+        "owner": {
+          "id": 22716,
+          "name": "Green Decision Labs and Research"
+        },
+        "provider": {
+          "id": 66,
+          "name": "AirGradient"
+        },
+        "isMobile": false,
+        "isMonitor": false,
+        "instruments": [
+          {
+            "id": 24,
+            "name": "AirGradient Open Air Generation 1 (O-1PST)"
+          }
+        ],
+        "sensors": [
+          {
+            "id": 14153357,
+            "name": "pm1 µg/m³",
+            "parameter": {
+              "id": 19,
+              "name": "pm1",
+              "units": "µg/m³",
+              "displayName": "PM1"
+            }
+          },
+          {
+            "id": 14153358,
+            "name": "pm25 µg/m³",
+            "parameter": {
+              "id": 2,
+              "name": "pm25",
+              "units": "µg/m³",
+              "displayName": "PM2.5"
+            }
+          },
+          {
+            "id": 14153359,
+            "name": "relativehumidity %",
+            "parameter": {
+              "id": 98,
+              "name": "relativehumidity",
+              "units": "%",
+              "displayName": "RH"
+            }
+          },
+          {
+            "id": 14153360,
+            "name": "temperature c",
+            "parameter": {
+              "id": 100,
+              "name": "temperature",
+              "units": "c",
+              "displayName": "Temperature (C)"
+            }
+          },
+          {
+            "id": 14153361,
+            "name": "um003 particles/cm³",
+            "parameter": {
+              "id": 125,
+              "name": "um003",
+              "units": "particles/cm³",
+              "displayName": "PM0.3 count"
+            }
+          }
+        ],
+        "coordinates": {
+          "latitude": 27.707763,
+          "longitude": 85.343189
+        },
+        "licenses": [
+          {
+            "id": 41,
+            "name": "CC BY 4.0",
+            "attribution": {
+              "name": "Green Decision Labs and Research",
+              "url": null
+            },
+            "dateFrom": "2023-07-15",
+            "dateTo": null
+          }
+        ],
+        "bounds": [
+          85.343189,
+          27.707763,
+          85.343189,
+          27.707763
+        ],
+        "distance": null,
+        "datetimeFirst": {
+          "utc": "2025-09-19T00:00:00Z",
+          "local": "2025-09-19T05:45:00+05:45"
+        },
+        "datetimeLast": {
+          "utc": "2026-01-16T16:00:00Z",
+          "local": "2026-01-16T21:45:00+05:45"
+        }
+      },
+      {
+        "id": 5509787,
+        "name": "Baluwatar (SC-02) - GD Labs",
+        "locality": null,
+        "timezone": "Asia/Kathmandu",
+        "country": {
+          "id": 145,
+          "code": "NP",
+          "name": "Nepal"
+        },
+        "owner": {
+          "id": 22716,
+          "name": "Green Decision Labs and Research"
+        },
+        "provider": {
+          "id": 66,
+          "name": "AirGradient"
+        },
+        "isMobile": false,
+        "isMonitor": false,
+        "instruments": [
+          {
+            "id": 7,
+            "name": "Unknown AirGradient Sensor"
+          }
+        ],
+        "sensors": [
+          {
+            "id": 14207424,
+            "name": "pm1 µg/m³",
+            "parameter": {
+              "id": 19,
+              "name": "pm1",
+              "units": "µg/m³",
+              "displayName": "PM1"
+            }
+          },
+          {
+            "id": 14207425,
+            "name": "pm25 µg/m³",
+            "parameter": {
+              "id": 2,
+              "name": "pm25",
+              "units": "µg/m³",
+              "displayName": "PM2.5"
+            }
+          },
+          {
+            "id": 14207426,
+            "name": "relativehumidity %",
+            "parameter": {
+              "id": 98,
+              "name": "relativehumidity",
+              "units": "%",
+              "displayName": "RH"
+            }
+          },
+          {
+            "id": 14207427,
+            "name": "temperature c",
+            "parameter": {
+              "id": 100,
+              "name": "temperature",
+              "units": "c",
+              "displayName": "Temperature (C)"
+            }
+          },
+          {
+            "id": 14207428,
+            "name": "um003 particles/cm³",
+            "parameter": {
+              "id": 125,
+              "name": "um003",
+              "units": "particles/cm³",
+              "displayName": "PM0.3 count"
+            }
+          }
+        ],
+        "coordinates": {
+          "latitude": 27.7249438,
+          "longitude": 85.331062
+        },
+        "licenses": [
+          {
+            "id": 41,
+            "name": "CC BY 4.0",
+            "attribution": {
+              "name": "Green Decision Labs and Research",
+              "url": null
+            },
+            "dateFrom": "2023-07-15",
+            "dateTo": null
+          }
+        ],
+        "bounds": [
+          85.331062,
+          27.7249438,
+          85.331062,
+          27.7249438
+        ],
+        "distance": null,
+        "datetimeFirst": {
+          "utc": "2025-09-25T07:00:00Z",
+          "local": "2025-09-25T12:45:00+05:45"
+        },
+        "datetimeLast": {
+          "utc": "2026-03-15T18:00:00Z",
+          "local": "2026-03-15T23:45:00+05:45"
+        }
+      },
+      {
+        "id": 5509788,
+        "name": "Lagankhel (SC - 05) - GD Labs",
+        "locality": null,
+        "timezone": "Asia/Kathmandu",
+        "country": {
+          "id": 145,
+          "code": "NP",
+          "name": "Nepal"
+        },
+        "owner": {
+          "id": 22716,
+          "name": "Green Decision Labs and Research"
+        },
+        "provider": {
+          "id": 66,
+          "name": "AirGradient"
+        },
+        "isMobile": false,
+        "isMonitor": false,
+        "instruments": [
+          {
+            "id": 24,
+            "name": "AirGradient Open Air Generation 1 (O-1PST)"
+          }
+        ],
+        "sensors": [
+          {
+            "id": 14272753,
+            "name": "pm1 µg/m³",
+            "parameter": {
+              "id": 19,
+              "name": "pm1",
+              "units": "µg/m³",
+              "displayName": "PM1"
+            }
+          },
+          {
+            "id": 14272754,
+            "name": "pm25 µg/m³",
+            "parameter": {
+              "id": 2,
+              "name": "pm25",
+              "units": "µg/m³",
+              "displayName": "PM2.5"
+            }
+          },
+          {
+            "id": 14272755,
+            "name": "relativehumidity %",
+            "parameter": {
+              "id": 98,
+              "name": "relativehumidity",
+              "units": "%",
+              "displayName": "RH"
+            }
+          },
+          {
+            "id": 14272756,
+            "name": "temperature c",
+            "parameter": {
+              "id": 100,
+              "name": "temperature",
+              "units": "c",
+              "displayName": "Temperature (C)"
+            }
+          },
+          {
+            "id": 14272757,
+            "name": "um003 particles/cm³",
+            "parameter": {
+              "id": 125,
+              "name": "um003",
+              "units": "particles/cm³",
+              "displayName": "PM0.3 count"
+            }
+          }
+        ],
+        "coordinates": {
+          "latitude": 27.666459,
+          "longitude": 85.323093
+        },
+        "licenses": [
+          {
+            "id": 41,
+            "name": "CC BY 4.0",
+            "attribution": {
+              "name": "Green Decision Labs and Research",
+              "url": null
+            },
+            "dateFrom": "2023-07-15",
+            "dateTo": null
+          }
+        ],
+        "bounds": [
+          85.323093,
+          27.666459,
+          85.323093,
+          27.666459
+        ],
+        "distance": null,
+        "datetimeFirst": {
+          "utc": "2025-10-03T00:00:00Z",
+          "local": "2025-10-03T05:45:00+05:45"
+        },
+        "datetimeLast": {
+          "utc": "2026-03-15T18:00:00Z",
+          "local": "2026-03-15T23:45:00+05:45"
+        }
+      },
+      {
+        "id": 5518333,
+        "name": "Sifal(SC-03)- GD Labs",
+        "locality": null,
+        "timezone": "Asia/Kathmandu",
+        "country": {
+          "id": 145,
+          "code": "NP",
+          "name": "Nepal"
+        },
+        "owner": {
+          "id": 22716,
+          "name": "Green Decision Labs and Research"
+        },
+        "provider": {
+          "id": 66,
+          "name": "AirGradient"
+        },
+        "isMobile": false,
+        "isMonitor": false,
+        "instruments": [
+          {
+            "id": 24,
+            "name": "AirGradient Open Air Generation 1 (O-1PST)"
+          }
+        ],
+        "sensors": [
+          {
+            "id": 14975413,
+            "name": "pm1 µg/m³",
+            "parameter": {
+              "id": 19,
+              "name": "pm1",
+              "units": "µg/m³",
+              "displayName": "PM1"
+            }
+          },
+          {
+            "id": 14975414,
+            "name": "pm25 µg/m³",
+            "parameter": {
+              "id": 2,
+              "name": "pm25",
+              "units": "µg/m³",
+              "displayName": "PM2.5"
+            }
+          },
+          {
+            "id": 14975415,
+            "name": "relativehumidity %",
+            "parameter": {
+              "id": 98,
+              "name": "relativehumidity",
+              "units": "%",
+              "displayName": "RH"
+            }
+          },
+          {
+            "id": 14975416,
+            "name": "temperature c",
+            "parameter": {
+              "id": 100,
+              "name": "temperature",
+              "units": "c",
+              "displayName": "Temperature (C)"
+            }
+          },
+          {
+            "id": 14975417,
+            "name": "um003 particles/cm³",
+            "parameter": {
+              "id": 125,
+              "name": "um003",
+              "units": "particles/cm³",
+              "displayName": "PM0.3 count"
+            }
+          }
+        ],
+        "coordinates": {
+          "latitude": 27.710794,
+          "longitude": 85.340591
+        },
+        "licenses": [
+          {
+            "id": 41,
+            "name": "CC BY 4.0",
+            "attribution": {
+              "name": "Green Decision Labs and Research",
+              "url": null
+            },
+            "dateFrom": "2023-07-15",
+            "dateTo": null
+          }
+        ],
+        "bounds": [
+          85.340591,
+          27.710794,
+          85.340591,
+          27.710794
+        ],
+        "distance": null,
+        "datetimeFirst": {
+          "utc": "2025-12-24T08:00:00Z",
+          "local": "2025-12-24T13:45:00+05:45"
+        },
+        "datetimeLast": {
+          "utc": "2026-03-15T18:00:00Z",
+          "local": "2026-03-15T23:45:00+05:45"
+        }
+      },
+      {
+        "id": 5519358,
+        "name": "Lamtangil (SC-04)- GD Labs",
+        "locality": null,
+        "timezone": "Asia/Kathmandu",
+        "country": {
+          "id": 145,
+          "code": "NP",
+          "name": "Nepal"
+        },
+        "owner": {
+          "id": 22716,
+          "name": "Green Decision Labs and Research"
+        },
+        "provider": {
+          "id": 66,
+          "name": "AirGradient"
+        },
+        "isMobile": false,
+        "isMonitor": false,
+        "instruments": [
+          {
+            "id": 24,
+            "name": "AirGradient Open Air Generation 1 (O-1PST)"
+          }
+        ],
+        "sensors": [
+          {
+            "id": 14976380,
+            "name": "pm1 µg/m³",
+            "parameter": {
+              "id": 19,
+              "name": "pm1",
+              "units": "µg/m³",
+              "displayName": "PM1"
+            }
+          },
+          {
+            "id": 14976381,
+            "name": "pm25 µg/m³",
+            "parameter": {
+              "id": 2,
+              "name": "pm25",
+              "units": "µg/m³",
+              "displayName": "PM2.5"
+            }
+          },
+          {
+            "id": 14976382,
+            "name": "relativehumidity %",
+            "parameter": {
+              "id": 98,
+              "name": "relativehumidity",
+              "units": "%",
+              "displayName": "RH"
+            }
+          },
+          {
+            "id": 14976383,
+            "name": "temperature c",
+            "parameter": {
+              "id": 100,
+              "name": "temperature",
+              "units": "c",
+              "displayName": "Temperature (C)"
+            }
+          },
+          {
+            "id": 14976384,
+            "name": "um003 particles/cm³",
+            "parameter": {
+              "id": 125,
+              "name": "um003",
+              "units": "particles/cm³",
+              "displayName": "PM0.3 count"
+            }
+          }
+        ],
+        "coordinates": {
+          "latitude": 27.731368,
+          "longitude": 85.336783
+        },
+        "licenses": [
+          {
+            "id": 41,
+            "name": "CC BY 4.0",
+            "attribution": {
+              "name": "Green Decision Labs and Research",
+              "url": null
+            },
+            "dateFrom": "2023-07-15",
+            "dateTo": null
+          }
+        ],
+        "bounds": [
+          85.336783,
+          27.731368,
+          85.336783,
+          27.731368
+        ],
+        "distance": null,
+        "datetimeFirst": {
+          "utc": "2025-12-24T09:00:00Z",
+          "local": "2025-12-24T14:45:00+05:45"
+        },
+        "datetimeLast": {
+          "utc": "2026-03-15T18:00:00Z",
+          "local": "2026-03-15T23:45:00+05:45"
+        }
+      },
+      {
+        "id": 5598104,
+        "name": "Pulchowk (SC-44) - GD Labs",
+        "locality": null,
+        "timezone": "Asia/Kathmandu",
+        "country": {
+          "id": 145,
+          "code": "NP",
+          "name": "Nepal"
+        },
+        "owner": {
+          "id": 22716,
+          "name": "Green Decision Labs and Research"
+        },
+        "provider": {
+          "id": 66,
+          "name": "AirGradient"
+        },
+        "isMobile": false,
+        "isMonitor": false,
+        "instruments": [
+          {
+            "id": 24,
+            "name": "AirGradient Open Air Generation 1 (O-1PST)"
+          }
+        ],
+        "sensors": [
+          {
+            "id": 14153467,
+            "name": "pm1 µg/m³",
+            "parameter": {
+              "id": 19,
+              "name": "pm1",
+              "units": "µg/m³",
+              "displayName": "PM1"
+            }
+          },
+          {
+            "id": 14153468,
+            "name": "pm25 µg/m³",
+            "parameter": {
+              "id": 2,
+              "name": "pm25",
+              "units": "µg/m³",
+              "displayName": "PM2.5"
+            }
+          },
+          {
+            "id": 14153469,
+            "name": "relativehumidity %",
+            "parameter": {
+              "id": 98,
+              "name": "relativehumidity",
+              "units": "%",
+              "displayName": "RH"
+            }
+          },
+          {
+            "id": 14153470,
+            "name": "temperature c",
+            "parameter": {
+              "id": 100,
+              "name": "temperature",
+              "units": "c",
+              "displayName": "Temperature (C)"
+            }
+          },
+          {
+            "id": 14153471,
+            "name": "um003 particles/cm³",
+            "parameter": {
+              "id": 125,
+              "name": "um003",
+              "units": "particles/cm³",
+              "displayName": "PM0.3 count"
+            }
+          }
+        ],
+        "coordinates": {
+          "latitude": 27.6773887,
+          "longitude": 85.3184176
+        },
+        "licenses": [
+          {
+            "id": 41,
+            "name": "CC BY 4.0",
+            "attribution": {
+              "name": "Green Decision Labs and Research",
+              "url": null
+            },
+            "dateFrom": "2023-07-15",
+            "dateTo": null
+          }
+        ],
+        "bounds": [
+          85.3184176,
+          27.6773887,
+          85.3184176,
+          27.6773887
+        ],
+        "distance": null,
+        "datetimeFirst": {
+          "utc": "2025-09-19T00:00:00Z",
+          "local": "2025-09-19T05:45:00+05:45"
+        },
+        "datetimeLast": {
+          "utc": "2026-01-27T08:00:00Z",
+          "local": "2026-01-27T13:45:00+05:45"
+        }
+      },
+      {
+        "id": 5633032,
+        "name": "Nakhipot (SC-08) - GD Labs",
+        "locality": null,
+        "timezone": "Asia/Kathmandu",
+        "country": {
+          "id": 145,
+          "code": "NP",
+          "name": "Nepal"
+        },
+        "owner": {
+          "id": 12,
+          "name": "AirGradient"
+        },
+        "provider": {
+          "id": 66,
+          "name": "AirGradient"
+        },
+        "isMobile": false,
+        "isMonitor": false,
+        "instruments": [
+          {
+            "id": 7,
+            "name": "Unknown AirGradient Sensor"
+          }
+        ],
+        "sensors": [
+          {
+            "id": 14153372,
+            "name": "pm1 µg/m³",
+            "parameter": {
+              "id": 19,
+              "name": "pm1",
+              "units": "µg/m³",
+              "displayName": "PM1"
+            }
+          },
+          {
+            "id": 14153373,
+            "name": "pm25 µg/m³",
+            "parameter": {
+              "id": 2,
+              "name": "pm25",
+              "units": "µg/m³",
+              "displayName": "PM2.5"
+            }
+          },
+          {
+            "id": 14153374,
+            "name": "relativehumidity %",
+            "parameter": {
+              "id": 98,
+              "name": "relativehumidity",
+              "units": "%",
+              "displayName": "RH"
+            }
+          },
+          {
+            "id": 14153375,
+            "name": "temperature c",
+            "parameter": {
+              "id": 100,
+              "name": "temperature",
+              "units": "c",
+              "displayName": "Temperature (C)"
+            }
+          },
+          {
+            "id": 14153376,
+            "name": "um003 particles/cm³",
+            "parameter": {
+              "id": 125,
+              "name": "um003",
+              "units": "particles/cm³",
+              "displayName": "PM0.3 count"
+            }
+          }
+        ],
+        "coordinates": {
+          "latitude": 27.6510811,
+          "longitude": 85.3178568
+        },
+        "licenses": [
+          {
+            "id": 41,
+            "name": "CC BY 4.0",
+            "attribution": {
+              "name": "AirGradient",
+              "url": null
+            },
+            "dateFrom": "2023-07-15",
+            "dateTo": null
+          }
+        ],
+        "bounds": [
+          85.3178568,
+          27.6510811,
+          85.3178568,
+          27.6510811
+        ],
+        "distance": null,
+        "datetimeFirst": {
+          "utc": "2025-09-19T00:00:00Z",
+          "local": "2025-09-19T05:45:00+05:45"
+        },
+        "datetimeLast": {
+          "utc": "2026-03-15T18:00:00Z",
+          "local": "2026-03-15T23:45:00+05:45"
+        }
+      },
+      {
+        "id": 5634500,
+        "name": "Sunakothi (SC - 06) - GD Labs",
+        "locality": null,
+        "timezone": "Asia/Kathmandu",
+        "country": {
+          "id": 145,
+          "code": "NP",
+          "name": "Nepal"
+        },
+        "owner": {
+          "id": 22716,
+          "name": "Green Decision Labs and Research"
+        },
+        "provider": {
+          "id": 66,
+          "name": "AirGradient"
+        },
+        "isMobile": false,
+        "isMonitor": false,
+        "instruments": [
+          {
+            "id": 24,
+            "name": "AirGradient Open Air Generation 1 (O-1PST)"
+          }
+        ],
+        "sensors": [
+          {
+            "id": 14153362,
+            "name": "pm1 µg/m³",
+            "parameter": {
+              "id": 19,
+              "name": "pm1",
+              "units": "µg/m³",
+              "displayName": "PM1"
+            }
+          },
+          {
+            "id": 14153363,
+            "name": "pm25 µg/m³",
+            "parameter": {
+              "id": 2,
+              "name": "pm25",
+              "units": "µg/m³",
+              "displayName": "PM2.5"
+            }
+          },
+          {
+            "id": 14153364,
+            "name": "relativehumidity %",
+            "parameter": {
+              "id": 98,
+              "name": "relativehumidity",
+              "units": "%",
+              "displayName": "RH"
+            }
+          },
+          {
+            "id": 14153365,
+            "name": "temperature c",
+            "parameter": {
+              "id": 100,
+              "name": "temperature",
+              "units": "c",
+              "displayName": "Temperature (C)"
+            }
+          },
+          {
+            "id": 14153366,
+            "name": "um003 particles/cm³",
+            "parameter": {
+              "id": 125,
+              "name": "um003",
+              "units": "particles/cm³",
+              "displayName": "PM0.3 count"
+            }
+          }
+        ],
+        "coordinates": {
+          "latitude": 27.630412,
+          "longitude": 85.320402
+        },
+        "licenses": [
+          {
+            "id": 41,
+            "name": "CC BY 4.0",
+            "attribution": {
+              "name": "Green Decision Labs and Research",
+              "url": null
+            },
+            "dateFrom": "2023-07-15",
+            "dateTo": null
+          }
+        ],
+        "bounds": [
+          85.320402,
+          27.630412,
+          85.320402,
+          27.630412
+        ],
+        "distance": null,
+        "datetimeFirst": {
+          "utc": "2025-09-19T00:00:00Z",
+          "local": "2025-09-19T05:45:00+05:45"
+        },
+        "datetimeLast": {
+          "utc": "2026-03-15T18:00:00Z",
+          "local": "2026-03-15T23:45:00+05:45"
+        }
+      },
+      {
+        "id": 5676345,
+        "name": "Chovar (SC - 07) - GD Labs",
+        "locality": null,
+        "timezone": "Asia/Kathmandu",
+        "country": {
+          "id": 145,
+          "code": "NP",
+          "name": "Nepal"
+        },
+        "owner": {
+          "id": 22716,
+          "name": "Green Decision Labs and Research"
+        },
+        "provider": {
+          "id": 66,
+          "name": "AirGradient"
+        },
+        "isMobile": false,
+        "isMonitor": false,
+        "instruments": [
+          {
+            "id": 24,
+            "name": "AirGradient Open Air Generation 1 (O-1PST)"
+          }
+        ],
+        "sensors": [
+          {
+            "id": 14153367,
+            "name": "pm1 µg/m³",
+            "parameter": {
+              "id": 19,
+              "name": "pm1",
+              "units": "µg/m³",
+              "displayName": "PM1"
+            }
+          },
+          {
+            "id": 14153368,
+            "name": "pm25 µg/m³",
+            "parameter": {
+              "id": 2,
+              "name": "pm25",
+              "units": "µg/m³",
+              "displayName": "PM2.5"
+            }
+          },
+          {
+            "id": 14153369,
+            "name": "relativehumidity %",
+            "parameter": {
+              "id": 98,
+              "name": "relativehumidity",
+              "units": "%",
+              "displayName": "RH"
+            }
+          },
+          {
+            "id": 14153370,
+            "name": "temperature c",
+            "parameter": {
+              "id": 100,
+              "name": "temperature",
+              "units": "c",
+              "displayName": "Temperature (C)"
+            }
+          },
+          {
+            "id": 14153371,
+            "name": "um003 particles/cm³",
+            "parameter": {
+              "id": 125,
+              "name": "um003",
+              "units": "particles/cm³",
+              "displayName": "PM0.3 count"
+            }
+          }
+        ],
+        "coordinates": {
+          "latitude": 27.6662854,
+          "longitude": 85.2937189
+        },
+        "licenses": [
+          {
+            "id": 41,
+            "name": "CC BY 4.0",
+            "attribution": {
+              "name": "Green Decision Labs and Research",
+              "url": null
+            },
+            "dateFrom": "2023-07-15",
+            "dateTo": null
+          }
+        ],
+        "bounds": [
+          85.2937189,
+          27.6662854,
+          85.2937189,
+          27.6662854
+        ],
+        "distance": null,
+        "datetimeFirst": {
+          "utc": "2025-09-19T00:00:00Z",
+          "local": "2025-09-19T05:45:00+05:45"
+        },
+        "datetimeLast": {
+          "utc": "2026-03-15T18:00:00Z",
+          "local": "2026-03-15T23:45:00+05:45"
+        }
+      },
+      {
+        "id": 5676826,
+        "name": "Taudaha (SC - 09) - GD Labs",
+        "locality": null,
+        "timezone": "Asia/Kathmandu",
+        "country": {
+          "id": 145,
+          "code": "NP",
+          "name": "Nepal"
+        },
+        "owner": {
+          "id": 22716,
+          "name": "Green Decision Labs and Research"
+        },
+        "provider": {
+          "id": 66,
+          "name": "AirGradient"
+        },
+        "isMobile": false,
+        "isMonitor": false,
+        "instruments": [
+          {
+            "id": 24,
+            "name": "AirGradient Open Air Generation 1 (O-1PST)"
+          }
+        ],
+        "sensors": [
+          {
+            "id": 14153377,
+            "name": "pm1 µg/m³",
+            "parameter": {
+              "id": 19,
+              "name": "pm1",
+              "units": "µg/m³",
+              "displayName": "PM1"
+            }
+          },
+          {
+            "id": 14153378,
+            "name": "pm25 µg/m³",
+            "parameter": {
+              "id": 2,
+              "name": "pm25",
+              "units": "µg/m³",
+              "displayName": "PM2.5"
+            }
+          },
+          {
+            "id": 14153379,
+            "name": "relativehumidity %",
+            "parameter": {
+              "id": 98,
+              "name": "relativehumidity",
+              "units": "%",
+              "displayName": "RH"
+            }
+          },
+          {
+            "id": 14153380,
+            "name": "temperature c",
+            "parameter": {
+              "id": 100,
+              "name": "temperature",
+              "units": "c",
+              "displayName": "Temperature (C)"
+            }
+          },
+          {
+            "id": 14153381,
+            "name": "um003 particles/cm³",
+            "parameter": {
+              "id": 125,
+              "name": "um003",
+              "units": "particles/cm³",
+              "displayName": "PM0.3 count"
+            }
+          }
+        ],
+        "coordinates": {
+          "latitude": 27.651121,
+          "longitude": 85.283954
+        },
+        "licenses": [
+          {
+            "id": 41,
+            "name": "CC BY 4.0",
+            "attribution": {
+              "name": "Green Decision Labs and Research",
+              "url": null
+            },
+            "dateFrom": "2023-07-15",
+            "dateTo": null
+          }
+        ],
+        "bounds": [
+          85.283954,
+          27.651121,
+          85.283954,
+          27.651121
+        ],
+        "distance": null,
+        "datetimeFirst": {
+          "utc": "2025-09-19T00:00:00Z",
+          "local": "2025-09-19T05:45:00+05:45"
+        },
+        "datetimeLast": {
+          "utc": "2026-03-06T07:00:00Z",
+          "local": "2026-03-06T12:45:00+05:45"
+        }
+      },
+      {
+        "id": 5695597,
+        "name": "CEN-SR-25: Patako Chowk, Patan Durbar Square",
+        "locality": null,
+        "timezone": "Asia/Kathmandu",
+        "country": {
+          "id": 145,
+          "code": "NP",
+          "name": "Nepal"
+        },
+        "owner": {
+          "id": 12,
+          "name": "AirGradient"
+        },
+        "provider": {
+          "id": 66,
+          "name": "AirGradient"
+        },
+        "isMobile": false,
+        "isMonitor": false,
+        "instruments": [
+          {
+            "id": 7,
+            "name": "Unknown AirGradient Sensor"
+          }
+        ],
+        "sensors": [
+          {
+            "id": 14153462,
+            "name": "pm1 µg/m³",
+            "parameter": {
+              "id": 19,
+              "name": "pm1",
+              "units": "µg/m³",
+              "displayName": "PM1"
+            }
+          },
+          {
+            "id": 14153463,
+            "name": "pm25 µg/m³",
+            "parameter": {
+              "id": 2,
+              "name": "pm25",
+              "units": "µg/m³",
+              "displayName": "PM2.5"
+            }
+          },
+          {
+            "id": 14153464,
+            "name": "relativehumidity %",
+            "parameter": {
+              "id": 98,
+              "name": "relativehumidity",
+              "units": "%",
+              "displayName": "RH"
+            }
+          },
+          {
+            "id": 14153465,
+            "name": "temperature c",
+            "parameter": {
+              "id": 100,
+              "name": "temperature",
+              "units": "c",
+              "displayName": "Temperature (C)"
+            }
+          },
+          {
+            "id": 14153466,
+            "name": "um003 particles/cm³",
+            "parameter": {
+              "id": 125,
+              "name": "um003",
+              "units": "particles/cm³",
+              "displayName": "PM0.3 count"
+            }
+          }
+        ],
+        "coordinates": {
+          "latitude": 27.673979,
+          "longitude": 85.325392
+        },
+        "licenses": [
+          {
+            "id": 41,
+            "name": "CC BY 4.0",
+            "attribution": {
+              "name": "AirGradient",
+              "url": null
+            },
+            "dateFrom": "2023-07-15",
+            "dateTo": null
+          }
+        ],
+        "bounds": [
+          85.325392,
+          27.673979,
+          85.325392,
+          27.673979
+        ],
+        "distance": null,
+        "datetimeFirst": {
+          "utc": "2025-09-19T00:00:00Z",
+          "local": "2025-09-19T05:45:00+05:45"
+        },
+        "datetimeLast": {
+          "utc": "2026-01-06T09:00:00Z",
+          "local": "2026-01-06T14:45:00+05:45"
+        }
+      },
+      {
+        "id": 5710077,
+        "name": "CEN-SR-02: Farsidol Brick Factories",
+        "locality": null,
+        "timezone": "Asia/Kathmandu",
+        "country": {
+          "id": 145,
+          "code": "NP",
+          "name": "Nepal"
+        },
+        "owner": {
+          "id": 22714,
+          "name": "Clean Energy Nepal (CEN)"
+        },
+        "provider": {
+          "id": 66,
+          "name": "AirGradient"
+        },
+        "isMobile": false,
+        "isMonitor": false,
+        "instruments": [
+          {
+            "id": 26,
+            "name": "AirGradient Open Air Max Generation 1 (O-M-1PPST-CE)"
+          }
+        ],
+        "sensors": [
+          {
+            "id": 14153452,
+            "name": "pm1 µg/m³",
+            "parameter": {
+              "id": 19,
+              "name": "pm1",
+              "units": "µg/m³",
+              "displayName": "PM1"
+            }
+          },
+          {
+            "id": 14153453,
+            "name": "pm25 µg/m³",
+            "parameter": {
+              "id": 2,
+              "name": "pm25",
+              "units": "µg/m³",
+              "displayName": "PM2.5"
+            }
+          },
+          {
+            "id": 14153454,
+            "name": "relativehumidity %",
+            "parameter": {
+              "id": 98,
+              "name": "relativehumidity",
+              "units": "%",
+              "displayName": "RH"
+            }
+          },
+          {
+            "id": 14153455,
+            "name": "temperature c",
+            "parameter": {
+              "id": 100,
+              "name": "temperature",
+              "units": "c",
+              "displayName": "Temperature (C)"
+            }
+          },
+          {
+            "id": 14153456,
+            "name": "um003 particles/cm³",
+            "parameter": {
+              "id": 125,
+              "name": "um003",
+              "units": "particles/cm³",
+              "displayName": "PM0.3 count"
+            }
+          }
+        ],
+        "coordinates": {
+          "latitude": 27.6175,
+          "longitude": 85.2961
+        },
+        "licenses": [
+          {
+            "id": 41,
+            "name": "CC BY 4.0",
+            "attribution": {
+              "name": "Clean Energy Nepal (CEN)",
+              "url": null
+            },
+            "dateFrom": "2023-07-15",
+            "dateTo": null
+          }
+        ],
+        "bounds": [
+          85.2961,
+          27.6175,
+          85.2961,
+          27.6175
+        ],
+        "distance": null,
+        "datetimeFirst": {
+          "utc": "2025-09-19T00:00:00Z",
+          "local": "2025-09-19T05:45:00+05:45"
+        },
+        "datetimeLast": {
+          "utc": "2026-02-27T21:00:00Z",
+          "local": "2026-02-28T02:45:00+05:45"
+        }
+      },
+      {
+        "id": 6070692,
+        "name": "Shantichowk (SC-11) - GD Labs",
+        "locality": null,
+        "timezone": "Asia/Kathmandu",
+        "country": {
+          "id": 145,
+          "code": "NP",
+          "name": "Nepal"
+        },
+        "owner": {
+          "id": 22716,
+          "name": "Green Decision Labs and Research"
+        },
+        "provider": {
+          "id": 66,
+          "name": "AirGradient"
+        },
+        "isMobile": false,
+        "isMonitor": false,
+        "instruments": [
+          {
+            "id": 24,
+            "name": "AirGradient Open Air Generation 1 (O-1PST)"
+          }
+        ],
+        "sensors": [
+          {
+            "id": 14327493,
+            "name": "pm1 µg/m³",
+            "parameter": {
+              "id": 19,
+              "name": "pm1",
+              "units": "µg/m³",
+              "displayName": "PM1"
+            }
+          },
+          {
+            "id": 14327494,
+            "name": "pm25 µg/m³",
+            "parameter": {
+              "id": 2,
+              "name": "pm25",
+              "units": "µg/m³",
+              "displayName": "PM2.5"
+            }
+          },
+          {
+            "id": 14327495,
+            "name": "relativehumidity %",
+            "parameter": {
+              "id": 98,
+              "name": "relativehumidity",
+              "units": "%",
+              "displayName": "RH"
+            }
+          },
+          {
+            "id": 14327496,
+            "name": "temperature c",
+            "parameter": {
+              "id": 100,
+              "name": "temperature",
+              "units": "c",
+              "displayName": "Temperature (C)"
+            }
+          },
+          {
+            "id": 14327497,
+            "name": "um003 particles/cm³",
+            "parameter": {
+              "id": 125,
+              "name": "um003",
+              "units": "particles/cm³",
+              "displayName": "PM0.3 count"
+            }
+          }
+        ],
+        "coordinates": {
+          "latitude": 27.7239866,
+          "longitude": 85.2793095
+        },
+        "licenses": [
+          {
+            "id": 41,
+            "name": "CC BY 4.0",
+            "attribution": {
+              "name": "Green Decision Labs and Research",
+              "url": null
+            },
+            "dateFrom": "2023-07-15",
+            "dateTo": null
+          }
+        ],
+        "bounds": [
+          85.2793095,
+          27.7239866,
+          85.2793095,
+          27.7239866
+        ],
+        "distance": null,
+        "datetimeFirst": {
+          "utc": "2025-10-09T07:00:00Z",
+          "local": "2025-10-09T12:45:00+05:45"
+        },
+        "datetimeLast": {
+          "utc": "2026-03-14T05:00:00Z",
+          "local": "2026-03-14T10:45:00+05:45"
+        }
+      },
+      {
+        "id": 6071242,
+        "name": "Gothatar (SC-12) - GD Labs",
+        "locality": null,
+        "timezone": "Asia/Kathmandu",
+        "country": {
+          "id": 145,
+          "code": "NP",
+          "name": "Nepal"
+        },
+        "owner": {
+          "id": 22716,
+          "name": "Green Decision Labs and Research"
+        },
+        "provider": {
+          "id": 66,
+          "name": "AirGradient"
+        },
+        "isMobile": false,
+        "isMonitor": false,
+        "instruments": [
+          {
+            "id": 24,
+            "name": "AirGradient Open Air Generation 1 (O-1PST)"
+          }
+        ],
+        "sensors": [
+          {
+            "id": 14327775,
+            "name": "pm1 µg/m³",
+            "parameter": {
+              "id": 19,
+              "name": "pm1",
+              "units": "µg/m³",
+              "displayName": "PM1"
+            }
+          },
+          {
+            "id": 14327776,
+            "name": "pm25 µg/m³",
+            "parameter": {
+              "id": 2,
+              "name": "pm25",
+              "units": "µg/m³",
+              "displayName": "PM2.5"
+            }
+          },
+          {
+            "id": 14327777,
+            "name": "relativehumidity %",
+            "parameter": {
+              "id": 98,
+              "name": "relativehumidity",
+              "units": "%",
+              "displayName": "RH"
+            }
+          },
+          {
+            "id": 14327778,
+            "name": "temperature c",
+            "parameter": {
+              "id": 100,
+              "name": "temperature",
+              "units": "c",
+              "displayName": "Temperature (C)"
+            }
+          },
+          {
+            "id": 14327779,
+            "name": "um003 particles/cm³",
+            "parameter": {
+              "id": 125,
+              "name": "um003",
+              "units": "particles/cm³",
+              "displayName": "PM0.3 count"
+            }
+          }
+        ],
+        "coordinates": {
+          "latitude": 27.7109112,
+          "longitude": 85.3803717
+        },
+        "licenses": [
+          {
+            "id": 41,
+            "name": "CC BY 4.0",
+            "attribution": {
+              "name": "Green Decision Labs and Research",
+              "url": null
+            },
+            "dateFrom": "2023-07-15",
+            "dateTo": null
+          }
+        ],
+        "bounds": [
+          85.3803717,
+          27.7109112,
+          85.3803717,
+          27.7109112
+        ],
+        "distance": null,
+        "datetimeFirst": {
+          "utc": "2025-10-09T08:00:00Z",
+          "local": "2025-10-09T13:45:00+05:45"
+        },
+        "datetimeLast": {
+          "utc": "2026-01-29T07:00:00Z",
+          "local": "2026-01-29T12:45:00+05:45"
+        }
+      },
+      {
+        "id": 6083043,
+        "name": "Gokarneshwor (SC-13) - GD Labs",
+        "locality": null,
+        "timezone": "Asia/Kathmandu",
+        "country": {
+          "id": 145,
+          "code": "NP",
+          "name": "Nepal"
+        },
+        "owner": {
+          "id": 22716,
+          "name": "Green Decision Labs and Research"
+        },
+        "provider": {
+          "id": 66,
+          "name": "AirGradient"
+        },
+        "isMobile": false,
+        "isMonitor": false,
+        "instruments": [
+          {
+            "id": 24,
+            "name": "AirGradient Open Air Generation 1 (O-1PST)"
+          }
+        ],
+        "sensors": [
+          {
+            "id": 14335683,
+            "name": "pm1 µg/m³",
+            "parameter": {
+              "id": 19,
+              "name": "pm1",
+              "units": "µg/m³",
+              "displayName": "PM1"
+            }
+          },
+          {
+            "id": 14335684,
+            "name": "pm25 µg/m³",
+            "parameter": {
+              "id": 2,
+              "name": "pm25",
+              "units": "µg/m³",
+              "displayName": "PM2.5"
+            }
+          },
+          {
+            "id": 14335685,
+            "name": "relativehumidity %",
+            "parameter": {
+              "id": 98,
+              "name": "relativehumidity",
+              "units": "%",
+              "displayName": "RH"
+            }
+          },
+          {
+            "id": 14335686,
+            "name": "temperature c",
+            "parameter": {
+              "id": 100,
+              "name": "temperature",
+              "units": "c",
+              "displayName": "Temperature (C)"
+            }
+          },
+          {
+            "id": 14335687,
+            "name": "um003 particles/cm³",
+            "parameter": {
+              "id": 125,
+              "name": "um003",
+              "units": "particles/cm³",
+              "displayName": "PM0.3 count"
+            }
+          }
+        ],
+        "coordinates": {
+          "latitude": 27.7206848,
+          "longitude": 85.381682
+        },
+        "licenses": [
+          {
+            "id": 41,
+            "name": "CC BY 4.0",
+            "attribution": {
+              "name": "Green Decision Labs and Research",
+              "url": null
+            },
+            "dateFrom": "2023-07-15",
+            "dateTo": null
+          }
+        ],
+        "bounds": [
+          85.381682,
+          27.7206848,
+          85.381682,
+          27.7206848
+        ],
+        "distance": null,
+        "datetimeFirst": {
+          "utc": "2025-10-10T07:00:00Z",
+          "local": "2025-10-10T12:45:00+05:45"
+        },
+        "datetimeLast": {
+          "utc": "2026-01-07T04:00:00Z",
+          "local": "2026-01-07T09:45:00+05:45"
+        }
+      },
+      {
+        "id": 6093431,
+        "name": "Mahankal (SC-16) - GD Labs",
+        "locality": null,
+        "timezone": "Asia/Kathmandu",
+        "country": {
+          "id": 145,
+          "code": "NP",
+          "name": "Nepal"
+        },
+        "owner": {
+          "id": 22716,
+          "name": "Green Decision Labs and Research"
+        },
+        "provider": {
+          "id": 66,
+          "name": "AirGradient"
+        },
+        "isMobile": false,
+        "isMonitor": false,
+        "instruments": [
+          {
+            "id": 24,
+            "name": "AirGradient Open Air Generation 1 (O-1PST)"
+          }
+        ],
+        "sensors": [
+          {
+            "id": 14362964,
+            "name": "pm1 µg/m³",
+            "parameter": {
+              "id": 19,
+              "name": "pm1",
+              "units": "µg/m³",
+              "displayName": "PM1"
+            }
+          },
+          {
+            "id": 14362965,
+            "name": "pm25 µg/m³",
+            "parameter": {
+              "id": 2,
+              "name": "pm25",
+              "units": "µg/m³",
+              "displayName": "PM2.5"
+            }
+          },
+          {
+            "id": 14362966,
+            "name": "relativehumidity %",
+            "parameter": {
+              "id": 98,
+              "name": "relativehumidity",
+              "units": "%",
+              "displayName": "RH"
+            }
+          },
+          {
+            "id": 14362967,
+            "name": "temperature c",
+            "parameter": {
+              "id": 100,
+              "name": "temperature",
+              "units": "c",
+              "displayName": "Temperature (C)"
+            }
+          },
+          {
+            "id": 14362968,
+            "name": "um003 particles/cm³",
+            "parameter": {
+              "id": 125,
+              "name": "um003",
+              "units": "particles/cm³",
+              "displayName": "PM0.3 count"
+            }
+          }
+        ],
+        "coordinates": {
+          "latitude": 27.7258555,
+          "longitude": 85.3581047
+        },
+        "licenses": [
+          {
+            "id": 41,
+            "name": "CC BY 4.0",
+            "attribution": {
+              "name": "Green Decision Labs and Research",
+              "url": null
+            },
+            "dateFrom": "2023-07-15",
+            "dateTo": null
+          }
+        ],
+        "bounds": [
+          85.3581047,
+          27.7258555,
+          85.3581047,
+          27.7258555
+        ],
+        "distance": null,
+        "datetimeFirst": {
+          "utc": "2025-10-13T05:00:00Z",
+          "local": "2025-10-13T10:45:00+05:45"
+        },
+        "datetimeLast": {
+          "utc": "2026-01-26T06:00:00Z",
+          "local": "2026-01-26T11:45:00+05:45"
+        }
+      },
+      {
+        "id": 6093432,
+        "name": "Chhetrapati (SC - 19) - GD Labs",
+        "locality": null,
+        "timezone": "Asia/Kathmandu",
+        "country": {
+          "id": 145,
+          "code": "NP",
+          "name": "Nepal"
+        },
+        "owner": {
+          "id": 22716,
+          "name": "Green Decision Labs and Research"
+        },
+        "provider": {
+          "id": 66,
+          "name": "AirGradient"
+        },
+        "isMobile": false,
+        "isMonitor": false,
+        "instruments": [
+          {
+            "id": 24,
+            "name": "AirGradient Open Air Generation 1 (O-1PST)"
+          }
+        ],
+        "sensors": [
+          {
+            "id": 14363830,
+            "name": "pm1 µg/m³",
+            "parameter": {
+              "id": 19,
+              "name": "pm1",
+              "units": "µg/m³",
+              "displayName": "PM1"
+            }
+          },
+          {
+            "id": 14363831,
+            "name": "pm25 µg/m³",
+            "parameter": {
+              "id": 2,
+              "name": "pm25",
+              "units": "µg/m³",
+              "displayName": "PM2.5"
+            }
+          },
+          {
+            "id": 14363832,
+            "name": "relativehumidity %",
+            "parameter": {
+              "id": 98,
+              "name": "relativehumidity",
+              "units": "%",
+              "displayName": "RH"
+            }
+          },
+          {
+            "id": 14363833,
+            "name": "temperature c",
+            "parameter": {
+              "id": 100,
+              "name": "temperature",
+              "units": "c",
+              "displayName": "Temperature (C)"
+            }
+          },
+          {
+            "id": 14363834,
+            "name": "um003 particles/cm³",
+            "parameter": {
+              "id": 125,
+              "name": "um003",
+              "units": "particles/cm³",
+              "displayName": "PM0.3 count"
+            }
+          }
+        ],
+        "coordinates": {
+          "latitude": 27.7119136,
+          "longitude": 85.3061473
+        },
+        "licenses": [
+          {
+            "id": 41,
+            "name": "CC BY 4.0",
+            "attribution": {
+              "name": "Green Decision Labs and Research",
+              "url": null
+            },
+            "dateFrom": "2023-07-15",
+            "dateTo": null
+          }
+        ],
+        "bounds": [
+          85.3061473,
+          27.7119136,
+          85.3061473,
+          27.7119136
+        ],
+        "distance": null,
+        "datetimeFirst": {
+          "utc": "2025-10-13T06:00:00Z",
+          "local": "2025-10-13T11:45:00+05:45"
+        },
+        "datetimeLast": {
+          "utc": "2026-03-10T07:00:00Z",
+          "local": "2026-03-10T12:45:00+05:45"
+        }
+      },
+      {
+        "id": 6093548,
+        "name": "Tarakeswor (SC-14)-GD Labs",
+        "locality": null,
+        "timezone": "Asia/Kathmandu",
+        "country": {
+          "id": 145,
+          "code": "NP",
+          "name": "Nepal"
+        },
+        "owner": {
+          "id": 22716,
+          "name": "Green Decision Labs and Research"
+        },
+        "provider": {
+          "id": 66,
+          "name": "AirGradient"
+        },
+        "isMobile": false,
+        "isMonitor": false,
+        "instruments": [
+          {
+            "id": 24,
+            "name": "AirGradient Open Air Generation 1 (O-1PST)"
+          }
+        ],
+        "sensors": [
+          {
+            "id": 14363839,
+            "name": "pm1 µg/m³",
+            "parameter": {
+              "id": 19,
+              "name": "pm1",
+              "units": "µg/m³",
+              "displayName": "PM1"
+            }
+          },
+          {
+            "id": 14363840,
+            "name": "pm25 µg/m³",
+            "parameter": {
+              "id": 2,
+              "name": "pm25",
+              "units": "µg/m³",
+              "displayName": "PM2.5"
+            }
+          },
+          {
+            "id": 14363841,
+            "name": "relativehumidity %",
+            "parameter": {
+              "id": 98,
+              "name": "relativehumidity",
+              "units": "%",
+              "displayName": "RH"
+            }
+          },
+          {
+            "id": 14363842,
+            "name": "temperature c",
+            "parameter": {
+              "id": 100,
+              "name": "temperature",
+              "units": "c",
+              "displayName": "Temperature (C)"
+            }
+          },
+          {
+            "id": 14363843,
+            "name": "um003 particles/cm³",
+            "parameter": {
+              "id": 125,
+              "name": "um003",
+              "units": "particles/cm³",
+              "displayName": "PM0.3 count"
+            }
+          }
+        ],
+        "coordinates": {
+          "latitude": 27.759667,
+          "longitude": 85.289631
+        },
+        "licenses": [
+          {
+            "id": 41,
+            "name": "CC BY 4.0",
+            "attribution": {
+              "name": "Green Decision Labs and Research",
+              "url": null
+            },
+            "dateFrom": "2023-07-15",
+            "dateTo": null
+          }
+        ],
+        "bounds": [
+          85.289631,
+          27.759667,
+          85.289631,
+          27.759667
+        ],
+        "distance": null,
+        "datetimeFirst": {
+          "utc": "2025-10-13T07:00:00Z",
+          "local": "2025-10-13T12:45:00+05:45"
+        },
+        "datetimeLast": {
+          "utc": "2026-03-15T18:00:00Z",
+          "local": "2026-03-15T23:45:00+05:45"
+        }
+      },
+      {
+        "id": 6093549,
+        "name": "Golfutar (SC- 17) - GD Labs",
+        "locality": null,
+        "timezone": "Asia/Kathmandu",
+        "country": {
+          "id": 145,
+          "code": "NP",
+          "name": "Nepal"
+        },
+        "owner": {
+          "id": 22716,
+          "name": "Green Decision Labs and Research"
+        },
+        "provider": {
+          "id": 66,
+          "name": "AirGradient"
+        },
+        "isMobile": false,
+        "isMonitor": false,
+        "instruments": [
+          {
+            "id": 24,
+            "name": "AirGradient Open Air Generation 1 (O-1PST)"
+          }
+        ],
+        "sensors": [
+          {
+            "id": 14363844,
+            "name": "pm1 µg/m³",
+            "parameter": {
+              "id": 19,
+              "name": "pm1",
+              "units": "µg/m³",
+              "displayName": "PM1"
+            }
+          },
+          {
+            "id": 14363845,
+            "name": "pm25 µg/m³",
+            "parameter": {
+              "id": 2,
+              "name": "pm25",
+              "units": "µg/m³",
+              "displayName": "PM2.5"
+            }
+          },
+          {
+            "id": 14363846,
+            "name": "relativehumidity %",
+            "parameter": {
+              "id": 98,
+              "name": "relativehumidity",
+              "units": "%",
+              "displayName": "RH"
+            }
+          },
+          {
+            "id": 14363847,
+            "name": "temperature c",
+            "parameter": {
+              "id": 100,
+              "name": "temperature",
+              "units": "c",
+              "displayName": "Temperature (C)"
+            }
+          },
+          {
+            "id": 14363848,
+            "name": "um003 particles/cm³",
+            "parameter": {
+              "id": 125,
+              "name": "um003",
+              "units": "particles/cm³",
+              "displayName": "PM0.3 count"
+            }
+          }
+        ],
+        "coordinates": {
+          "latitude": 27.74857,
+          "longitude": 85.349052
+        },
+        "licenses": [
+          {
+            "id": 41,
+            "name": "CC BY 4.0",
+            "attribution": {
+              "name": "Green Decision Labs and Research",
+              "url": null
+            },
+            "dateFrom": "2023-07-15",
+            "dateTo": null
+          }
+        ],
+        "bounds": [
+          85.349052,
+          27.74857,
+          85.349052,
+          27.74857
+        ],
+        "distance": null,
+        "datetimeFirst": {
+          "utc": "2025-10-13T07:00:00Z",
+          "local": "2025-10-13T12:45:00+05:45"
+        },
+        "datetimeLast": {
+          "utc": "2026-03-15T18:00:00Z",
+          "local": "2026-03-15T23:45:00+05:45"
+        }
+      },
+      {
+        "id": 6093550,
+        "name": "Tankeshwor (SC- 18) - GD Labs",
+        "locality": null,
+        "timezone": "Asia/Kathmandu",
+        "country": {
+          "id": 145,
+          "code": "NP",
+          "name": "Nepal"
+        },
+        "owner": {
+          "id": 22716,
+          "name": "Green Decision Labs and Research"
+        },
+        "provider": {
+          "id": 66,
+          "name": "AirGradient"
+        },
+        "isMobile": false,
+        "isMonitor": false,
+        "instruments": [
+          {
+            "id": 24,
+            "name": "AirGradient Open Air Generation 1 (O-1PST)"
+          }
+        ],
+        "sensors": [
+          {
+            "id": 14363849,
+            "name": "pm1 µg/m³",
+            "parameter": {
+              "id": 19,
+              "name": "pm1",
+              "units": "µg/m³",
+              "displayName": "PM1"
+            }
+          },
+          {
+            "id": 14363850,
+            "name": "pm25 µg/m³",
+            "parameter": {
+              "id": 2,
+              "name": "pm25",
+              "units": "µg/m³",
+              "displayName": "PM2.5"
+            }
+          },
+          {
+            "id": 14363851,
+            "name": "relativehumidity %",
+            "parameter": {
+              "id": 98,
+              "name": "relativehumidity",
+              "units": "%",
+              "displayName": "RH"
+            }
+          },
+          {
+            "id": 14363852,
+            "name": "temperature c",
+            "parameter": {
+              "id": 100,
+              "name": "temperature",
+              "units": "c",
+              "displayName": "Temperature (C)"
+            }
+          },
+          {
+            "id": 14363853,
+            "name": "um003 particles/cm³",
+            "parameter": {
+              "id": 125,
+              "name": "um003",
+              "units": "particles/cm³",
+              "displayName": "PM0.3 count"
+            }
+          }
+        ],
+        "coordinates": {
+          "latitude": 27.7003531,
+          "longitude": 85.3015259
+        },
+        "licenses": [
+          {
+            "id": 41,
+            "name": "CC BY 4.0",
+            "attribution": {
+              "name": "Green Decision Labs and Research",
+              "url": null
+            },
+            "dateFrom": "2023-07-15",
+            "dateTo": null
+          }
+        ],
+        "bounds": [
+          85.3015259,
+          27.7003531,
+          85.3015259,
+          27.7003531
+        ],
+        "distance": null,
+        "datetimeFirst": {
+          "utc": "2025-10-13T07:00:00Z",
+          "local": "2025-10-13T12:45:00+05:45"
+        },
+        "datetimeLast": {
+          "utc": "2026-03-15T18:00:00Z",
+          "local": "2026-03-15T23:45:00+05:45"
+        }
+      },
+      {
+        "id": 6093551,
+        "name": "Teku Ward 12 (SC - 20) - GD Labs ",
+        "locality": null,
+        "timezone": "Asia/Kathmandu",
+        "country": {
+          "id": 145,
+          "code": "NP",
+          "name": "Nepal"
+        },
+        "owner": {
+          "id": 22716,
+          "name": "Green Decision Labs and Research"
+        },
+        "provider": {
+          "id": 66,
+          "name": "AirGradient"
+        },
+        "isMobile": false,
+        "isMonitor": false,
+        "instruments": [
+          {
+            "id": 24,
+            "name": "AirGradient Open Air Generation 1 (O-1PST)"
+          }
+        ],
+        "sensors": [
+          {
+            "id": 14415607,
+            "name": "pm1 µg/m³",
+            "parameter": {
+              "id": 19,
+              "name": "pm1",
+              "units": "µg/m³",
+              "displayName": "PM1"
+            }
+          },
+          {
+            "id": 14415608,
+            "name": "pm25 µg/m³",
+            "parameter": {
+              "id": 2,
+              "name": "pm25",
+              "units": "µg/m³",
+              "displayName": "PM2.5"
+            }
+          },
+          {
+            "id": 14415609,
+            "name": "relativehumidity %",
+            "parameter": {
+              "id": 98,
+              "name": "relativehumidity",
+              "units": "%",
+              "displayName": "RH"
+            }
+          },
+          {
+            "id": 14415610,
+            "name": "temperature c",
+            "parameter": {
+              "id": 100,
+              "name": "temperature",
+              "units": "c",
+              "displayName": "Temperature (C)"
+            }
+          },
+          {
+            "id": 14415611,
+            "name": "um003 particles/cm³",
+            "parameter": {
+              "id": 125,
+              "name": "um003",
+              "units": "particles/cm³",
+              "displayName": "PM0.3 count"
+            }
+          }
+        ],
+        "coordinates": {
+          "latitude": 27.6988338,
+          "longitude": 85.3041625
+        },
+        "licenses": [
+          {
+            "id": 41,
+            "name": "CC BY 4.0",
+            "attribution": {
+              "name": "Green Decision Labs and Research",
+              "url": null
+            },
+            "dateFrom": "2023-07-15",
+            "dateTo": null
+          }
+        ],
+        "bounds": [
+          85.3041625,
+          27.6988338,
+          85.3041625,
+          27.6988338
+        ],
+        "distance": null,
+        "datetimeFirst": {
+          "utc": "2025-10-19T09:00:00Z",
+          "local": "2025-10-19T14:45:00+05:45"
+        },
+        "datetimeLast": {
+          "utc": "2026-03-10T10:00:00Z",
+          "local": "2026-03-10T15:45:00+05:45"
+        }
+      },
+      {
+        "id": 6093752,
+        "name": "Ramkot (SC - 10) - GD Labs",
+        "locality": null,
+        "timezone": "Asia/Kathmandu",
+        "country": {
+          "id": 145,
+          "code": "NP",
+          "name": "Nepal"
+        },
+        "owner": {
+          "id": 12,
+          "name": "AirGradient"
+        },
+        "provider": {
+          "id": 66,
+          "name": "AirGradient"
+        },
+        "isMobile": false,
+        "isMonitor": false,
+        "instruments": [
+          {
+            "id": 24,
+            "name": "AirGradient Open Air Generation 1 (O-1PST)"
+          }
+        ],
+        "sensors": [
+          {
+            "id": 14365293,
+            "name": "pm1 µg/m³",
+            "parameter": {
+              "id": 19,
+              "name": "pm1",
+              "units": "µg/m³",
+              "displayName": "PM1"
+            }
+          },
+          {
+            "id": 14365294,
+            "name": "pm25 µg/m³",
+            "parameter": {
+              "id": 2,
+              "name": "pm25",
+              "units": "µg/m³",
+              "displayName": "PM2.5"
+            }
+          },
+          {
+            "id": 14365295,
+            "name": "relativehumidity %",
+            "parameter": {
+              "id": 98,
+              "name": "relativehumidity",
+              "units": "%",
+              "displayName": "RH"
+            }
+          },
+          {
+            "id": 14365296,
+            "name": "temperature c",
+            "parameter": {
+              "id": 100,
+              "name": "temperature",
+              "units": "c",
+              "displayName": "Temperature (C)"
+            }
+          },
+          {
+            "id": 14365297,
+            "name": "um003 particles/cm³",
+            "parameter": {
+              "id": 125,
+              "name": "um003",
+              "units": "particles/cm³",
+              "displayName": "PM0.3 count"
+            }
+          }
+        ],
+        "coordinates": {
+          "latitude": 27.695671,
+          "longitude": 85.337428
+        },
+        "licenses": [
+          {
+            "id": 41,
+            "name": "CC BY 4.0",
+            "attribution": {
+              "name": "AirGradient",
+              "url": null
+            },
+            "dateFrom": "2023-07-15",
+            "dateTo": null
+          }
+        ],
+        "bounds": [
+          85.337428,
+          27.695671,
+          85.337428,
+          27.695671
+        ],
+        "distance": null,
+        "datetimeFirst": {
+          "utc": "2025-10-13T09:00:00Z",
+          "local": "2025-10-13T14:45:00+05:45"
+        },
+        "datetimeLast": {
+          "utc": "2026-03-15T10:00:00Z",
+          "local": "2026-03-15T15:45:00+05:45"
+        }
+      },
+      {
+        "id": 6094668,
+        "name": "Sundarighat (SC-23) - GD Labs",
+        "locality": null,
+        "timezone": "Asia/Kathmandu",
+        "country": {
+          "id": 145,
+          "code": "NP",
+          "name": "Nepal"
+        },
+        "owner": {
+          "id": 22716,
+          "name": "Green Decision Labs and Research"
+        },
+        "provider": {
+          "id": 66,
+          "name": "AirGradient"
+        },
+        "isMobile": false,
+        "isMonitor": false,
+        "instruments": [
+          {
+            "id": 24,
+            "name": "AirGradient Open Air Generation 1 (O-1PST)"
+          }
+        ],
+        "sensors": [
+          {
+            "id": 14371767,
+            "name": "pm1 µg/m³",
+            "parameter": {
+              "id": 19,
+              "name": "pm1",
+              "units": "µg/m³",
+              "displayName": "PM1"
+            }
+          },
+          {
+            "id": 14371768,
+            "name": "pm25 µg/m³",
+            "parameter": {
+              "id": 2,
+              "name": "pm25",
+              "units": "µg/m³",
+              "displayName": "PM2.5"
+            }
+          },
+          {
+            "id": 14371769,
+            "name": "relativehumidity %",
+            "parameter": {
+              "id": 98,
+              "name": "relativehumidity",
+              "units": "%",
+              "displayName": "RH"
+            }
+          },
+          {
+            "id": 14371770,
+            "name": "temperature c",
+            "parameter": {
+              "id": 100,
+              "name": "temperature",
+              "units": "c",
+              "displayName": "Temperature (C)"
+            }
+          },
+          {
+            "id": 14371771,
+            "name": "um003 particles/cm³",
+            "parameter": {
+              "id": 125,
+              "name": "um003",
+              "units": "particles/cm³",
+              "displayName": "PM0.3 count"
+            }
+          }
+        ],
+        "coordinates": {
+          "latitude": 27.6737702,
+          "longitude": 85.2948301
+        },
+        "licenses": [
+          {
+            "id": 41,
+            "name": "CC BY 4.0",
+            "attribution": {
+              "name": "Green Decision Labs and Research",
+              "url": null
+            },
+            "dateFrom": "2023-07-15",
+            "dateTo": null
+          }
+        ],
+        "bounds": [
+          85.2948301,
+          27.6737702,
+          85.2948301,
+          27.6737702
+        ],
+        "distance": null,
+        "datetimeFirst": {
+          "utc": "2025-10-14T05:00:00Z",
+          "local": "2025-10-14T10:45:00+05:45"
+        },
+        "datetimeLast": {
+          "utc": "2026-03-15T18:00:00Z",
+          "local": "2026-03-15T23:45:00+05:45"
+        }
+      },
+      {
+        "id": 6094706,
+        "name": "Kritipur Ward 3 (SC-25) - GD Labs",
+        "locality": null,
+        "timezone": "Asia/Kathmandu",
+        "country": {
+          "id": 145,
+          "code": "NP",
+          "name": "Nepal"
+        },
+        "owner": {
+          "id": 22716,
+          "name": "Green Decision Labs and Research"
+        },
+        "provider": {
+          "id": 66,
+          "name": "AirGradient"
+        },
+        "isMobile": false,
+        "isMonitor": false,
+        "instruments": [
+          {
+            "id": 24,
+            "name": "AirGradient Open Air Generation 1 (O-1PST)"
+          }
+        ],
+        "sensors": [
+          {
+            "id": 14372570,
+            "name": "pm1 µg/m³",
+            "parameter": {
+              "id": 19,
+              "name": "pm1",
+              "units": "µg/m³",
+              "displayName": "PM1"
+            }
+          },
+          {
+            "id": 14372571,
+            "name": "pm25 µg/m³",
+            "parameter": {
+              "id": 2,
+              "name": "pm25",
+              "units": "µg/m³",
+              "displayName": "PM2.5"
+            }
+          },
+          {
+            "id": 14372572,
+            "name": "relativehumidity %",
+            "parameter": {
+              "id": 98,
+              "name": "relativehumidity",
+              "units": "%",
+              "displayName": "RH"
+            }
+          },
+          {
+            "id": 14372573,
+            "name": "temperature c",
+            "parameter": {
+              "id": 100,
+              "name": "temperature",
+              "units": "c",
+              "displayName": "Temperature (C)"
+            }
+          },
+          {
+            "id": 14372574,
+            "name": "um003 particles/cm³",
+            "parameter": {
+              "id": 125,
+              "name": "um003",
+              "units": "particles/cm³",
+              "displayName": "PM0.3 count"
+            }
+          }
+        ],
+        "coordinates": {
+          "latitude": 27.6774083,
+          "longitude": 85.2727816
+        },
+        "licenses": [
+          {
+            "id": 41,
+            "name": "CC BY 4.0",
+            "attribution": {
+              "name": "Green Decision Labs and Research",
+              "url": null
+            },
+            "dateFrom": "2023-07-15",
+            "dateTo": null
+          }
+        ],
+        "bounds": [
+          85.2727816,
+          27.6774083,
+          85.2727816,
+          27.6774083
+        ],
+        "distance": null,
+        "datetimeFirst": {
+          "utc": "2025-10-14T06:00:00Z",
+          "local": "2025-10-14T11:45:00+05:45"
+        },
+        "datetimeLast": {
+          "utc": "2026-03-15T18:00:00Z",
+          "local": "2026-03-15T23:45:00+05:45"
+        }
+      },
+      {
+        "id": 6094777,
+        "name": "Tyanglaphat (SC - 21) - GD Labs",
+        "locality": null,
+        "timezone": "Asia/Kathmandu",
+        "country": {
+          "id": 145,
+          "code": "NP",
+          "name": "Nepal"
+        },
+        "owner": {
+          "id": 22716,
+          "name": "Green Decision Labs and Research"
+        },
+        "provider": {
+          "id": 66,
+          "name": "AirGradient"
+        },
+        "isMobile": false,
+        "isMonitor": false,
+        "instruments": [
+          {
+            "id": 22,
+            "name": "AirGradient ONE Generation 9 (I-9PSL-DE)"
+          }
+        ],
+        "sensors": [
+          {
+            "id": 14372565,
+            "name": "pm1 µg/m³",
+            "parameter": {
+              "id": 19,
+              "name": "pm1",
+              "units": "µg/m³",
+              "displayName": "PM1"
+            }
+          },
+          {
+            "id": 14372566,
+            "name": "pm25 µg/m³",
+            "parameter": {
+              "id": 2,
+              "name": "pm25",
+              "units": "µg/m³",
+              "displayName": "PM2.5"
+            }
+          },
+          {
+            "id": 14372567,
+            "name": "relativehumidity %",
+            "parameter": {
+              "id": 98,
+              "name": "relativehumidity",
+              "units": "%",
+              "displayName": "RH"
+            }
+          },
+          {
+            "id": 14372568,
+            "name": "temperature c",
+            "parameter": {
+              "id": 100,
+              "name": "temperature",
+              "units": "c",
+              "displayName": "Temperature (C)"
+            }
+          },
+          {
+            "id": 14372569,
+            "name": "um003 particles/cm³",
+            "parameter": {
+              "id": 125,
+              "name": "um003",
+              "units": "particles/cm³",
+              "displayName": "PM0.3 count"
+            }
+          }
+        ],
+        "coordinates": {
+          "latitude": 27.6861651,
+          "longitude": 85.28026
+        },
+        "licenses": [
+          {
+            "id": 41,
+            "name": "CC BY 4.0",
+            "attribution": {
+              "name": "Green Decision Labs and Research",
+              "url": null
+            },
+            "dateFrom": "2023-07-15",
+            "dateTo": null
+          }
+        ],
+        "bounds": [
+          85.28026,
+          27.6861651,
+          85.28026,
+          27.6861651
+        ],
+        "distance": null,
+        "datetimeFirst": {
+          "utc": "2025-10-14T06:00:00Z",
+          "local": "2025-10-14T11:45:00+05:45"
+        },
+        "datetimeLast": {
+          "utc": "2026-03-15T18:00:00Z",
+          "local": "2026-03-15T23:45:00+05:45"
+        }
+      },
+      {
+        "id": 6094778,
+        "name": "Sanepa (SC - 22) - GD Labs",
+        "locality": null,
+        "timezone": "Asia/Kathmandu",
+        "country": {
+          "id": 145,
+          "code": "NP",
+          "name": "Nepal"
+        },
+        "owner": {
+          "id": 22716,
+          "name": "Green Decision Labs and Research"
+        },
+        "provider": {
+          "id": 66,
+          "name": "AirGradient"
+        },
+        "isMobile": false,
+        "isMonitor": false,
+        "instruments": [
+          {
+            "id": 24,
+            "name": "AirGradient Open Air Generation 1 (O-1PST)"
+          }
+        ],
+        "sensors": [
+          {
+            "id": 14372846,
+            "name": "pm1 µg/m³",
+            "parameter": {
+              "id": 19,
+              "name": "pm1",
+              "units": "µg/m³",
+              "displayName": "PM1"
+            }
+          },
+          {
+            "id": 14372847,
+            "name": "pm25 µg/m³",
+            "parameter": {
+              "id": 2,
+              "name": "pm25",
+              "units": "µg/m³",
+              "displayName": "PM2.5"
+            }
+          },
+          {
+            "id": 14372848,
+            "name": "relativehumidity %",
+            "parameter": {
+              "id": 98,
+              "name": "relativehumidity",
+              "units": "%",
+              "displayName": "RH"
+            }
+          },
+          {
+            "id": 14372849,
+            "name": "temperature c",
+            "parameter": {
+              "id": 100,
+              "name": "temperature",
+              "units": "c",
+              "displayName": "Temperature (C)"
+            }
+          },
+          {
+            "id": 14372850,
+            "name": "um003 particles/cm³",
+            "parameter": {
+              "id": 125,
+              "name": "um003",
+              "units": "particles/cm³",
+              "displayName": "PM0.3 count"
+            }
+          }
+        ],
+        "coordinates": {
+          "latitude": 27.6854882,
+          "longitude": 85.3091634
+        },
+        "licenses": [
+          {
+            "id": 41,
+            "name": "CC BY 4.0",
+            "attribution": {
+              "name": "Green Decision Labs and Research",
+              "url": null
+            },
+            "dateFrom": "2023-07-15",
+            "dateTo": null
+          }
+        ],
+        "bounds": [
+          85.3091634,
+          27.6854882,
+          85.3091634,
+          27.6854882
+        ],
+        "distance": null,
+        "datetimeFirst": {
+          "utc": "2025-10-14T08:00:00Z",
+          "local": "2025-10-14T13:45:00+05:45"
+        },
+        "datetimeLast": {
+          "utc": "2026-03-15T18:00:00Z",
+          "local": "2026-03-15T23:45:00+05:45"
+        }
+      },
+      {
+        "id": 6094779,
+        "name": "Balaju (SC-26)- GD Labs",
+        "locality": null,
+        "timezone": "Asia/Kathmandu",
+        "country": {
+          "id": 145,
+          "code": "NP",
+          "name": "Nepal"
+        },
+        "owner": {
+          "id": 22716,
+          "name": "Green Decision Labs and Research"
+        },
+        "provider": {
+          "id": 66,
+          "name": "AirGradient"
+        },
+        "isMobile": false,
+        "isMonitor": false,
+        "instruments": [
+          {
+            "id": 24,
+            "name": "AirGradient Open Air Generation 1 (O-1PST)"
+          }
+        ],
+        "sensors": [
+          {
+            "id": 14372575,
+            "name": "pm1 µg/m³",
+            "parameter": {
+              "id": 19,
+              "name": "pm1",
+              "units": "µg/m³",
+              "displayName": "PM1"
+            }
+          },
+          {
+            "id": 14372576,
+            "name": "pm25 µg/m³",
+            "parameter": {
+              "id": 2,
+              "name": "pm25",
+              "units": "µg/m³",
+              "displayName": "PM2.5"
+            }
+          },
+          {
+            "id": 14372577,
+            "name": "relativehumidity %",
+            "parameter": {
+              "id": 98,
+              "name": "relativehumidity",
+              "units": "%",
+              "displayName": "RH"
+            }
+          },
+          {
+            "id": 14372578,
+            "name": "temperature c",
+            "parameter": {
+              "id": 100,
+              "name": "temperature",
+              "units": "c",
+              "displayName": "Temperature (C)"
+            }
+          },
+          {
+            "id": 14372579,
+            "name": "um003 particles/cm³",
+            "parameter": {
+              "id": 125,
+              "name": "um003",
+              "units": "particles/cm³",
+              "displayName": "PM0.3 count"
+            }
+          }
+        ],
+        "coordinates": {
+          "latitude": 27.738289,
+          "longitude": 85.302611
+        },
+        "licenses": [
+          {
+            "id": 41,
+            "name": "CC BY 4.0",
+            "attribution": {
+              "name": "Green Decision Labs and Research",
+              "url": null
+            },
+            "dateFrom": "2023-07-15",
+            "dateTo": null
+          }
+        ],
+        "bounds": [
+          85.302611,
+          27.738289,
+          85.302611,
+          27.738289
+        ],
+        "distance": null,
+        "datetimeFirst": {
+          "utc": "2025-10-14T07:00:00Z",
+          "local": "2025-10-14T12:45:00+05:45"
+        },
+        "datetimeLast": {
+          "utc": "2026-02-06T04:00:00Z",
+          "local": "2026-02-06T09:45:00+05:45"
+        }
+      },
+      {
+        "id": 6096081,
+        "name": "Tarakeswor (SC-15)- GD Labs",
+        "locality": null,
+        "timezone": "Asia/Kathmandu",
+        "country": {
+          "id": 145,
+          "code": "NP",
+          "name": "Nepal"
+        },
+        "owner": {
+          "id": 12,
+          "name": "AirGradient"
+        },
+        "provider": {
+          "id": 66,
+          "name": "AirGradient"
+        },
+        "isMobile": false,
+        "isMonitor": false,
+        "instruments": [
+          {
+            "id": 7,
+            "name": "Unknown AirGradient Sensor"
+          }
+        ],
+        "sensors": [
+          {
+            "id": 14382735,
+            "name": "pm1 µg/m³",
+            "parameter": {
+              "id": 19,
+              "name": "pm1",
+              "units": "µg/m³",
+              "displayName": "PM1"
+            }
+          },
+          {
+            "id": 14382736,
+            "name": "pm25 µg/m³",
+            "parameter": {
+              "id": 2,
+              "name": "pm25",
+              "units": "µg/m³",
+              "displayName": "PM2.5"
+            }
+          },
+          {
+            "id": 14382737,
+            "name": "relativehumidity %",
+            "parameter": {
+              "id": 98,
+              "name": "relativehumidity",
+              "units": "%",
+              "displayName": "RH"
+            }
+          },
+          {
+            "id": 14382738,
+            "name": "temperature c",
+            "parameter": {
+              "id": 100,
+              "name": "temperature",
+              "units": "c",
+              "displayName": "Temperature (C)"
+            }
+          },
+          {
+            "id": 14382739,
+            "name": "um003 particles/cm³",
+            "parameter": {
+              "id": 125,
+              "name": "um003",
+              "units": "particles/cm³",
+              "displayName": "PM0.3 count"
+            }
+          }
+        ],
+        "coordinates": {
+          "latitude": 27.759288,
+          "longitude": 85.289453
+        },
+        "licenses": [
+          {
+            "id": 41,
+            "name": "CC BY 4.0",
+            "attribution": {
+              "name": "AirGradient",
+              "url": null
+            },
+            "dateFrom": "2023-07-15",
+            "dateTo": null
+          }
+        ],
+        "bounds": [
+          85.289453,
+          27.759288,
+          85.289453,
+          27.759288
+        ],
+        "distance": null,
+        "datetimeFirst": {
+          "utc": "2025-10-15T11:00:00Z",
+          "local": "2025-10-15T16:45:00+05:45"
+        },
+        "datetimeLast": {
+          "utc": "2025-10-16T06:00:00Z",
+          "local": "2025-10-16T11:45:00+05:45"
+        }
+      },
+      {
+        "id": 6120977,
+        "name": "Sitapaila (SC-30) - GD Labs",
+        "locality": null,
+        "timezone": "Asia/Kathmandu",
+        "country": {
+          "id": 145,
+          "code": "NP",
+          "name": "Nepal"
+        },
+        "owner": {
+          "id": 22716,
+          "name": "Green Decision Labs and Research"
+        },
+        "provider": {
+          "id": 66,
+          "name": "AirGradient"
+        },
+        "isMobile": false,
+        "isMonitor": false,
+        "instruments": [
+          {
+            "id": 24,
+            "name": "AirGradient Open Air Generation 1 (O-1PST)"
+          }
+        ],
+        "sensors": [
+          {
+            "id": 14564637,
+            "name": "pm1 µg/m³",
+            "parameter": {
+              "id": 19,
+              "name": "pm1",
+              "units": "µg/m³",
+              "displayName": "PM1"
+            }
+          },
+          {
+            "id": 14564638,
+            "name": "pm25 µg/m³",
+            "parameter": {
+              "id": 2,
+              "name": "pm25",
+              "units": "µg/m³",
+              "displayName": "PM2.5"
+            }
+          },
+          {
+            "id": 14564639,
+            "name": "relativehumidity %",
+            "parameter": {
+              "id": 98,
+              "name": "relativehumidity",
+              "units": "%",
+              "displayName": "RH"
+            }
+          },
+          {
+            "id": 14564640,
+            "name": "temperature c",
+            "parameter": {
+              "id": 100,
+              "name": "temperature",
+              "units": "c",
+              "displayName": "Temperature (C)"
+            }
+          },
+          {
+            "id": 14564641,
+            "name": "um003 particles/cm³",
+            "parameter": {
+              "id": 125,
+              "name": "um003",
+              "units": "particles/cm³",
+              "displayName": "PM0.3 count"
+            }
+          }
+        ],
+        "coordinates": {
+          "latitude": 27.7093728,
+          "longitude": 85.2808987
+        },
+        "licenses": [
+          {
+            "id": 41,
+            "name": "CC BY 4.0",
+            "attribution": {
+              "name": "Green Decision Labs and Research",
+              "url": null
+            },
+            "dateFrom": "2023-07-15",
+            "dateTo": null
+          }
+        ],
+        "bounds": [
+          85.2808987,
+          27.7093728,
+          85.2808987,
+          27.7093728
+        ],
+        "distance": null,
+        "datetimeFirst": {
+          "utc": "2025-11-06T06:00:00Z",
+          "local": "2025-11-06T11:45:00+05:45"
+        },
+        "datetimeLast": {
+          "utc": "2026-03-15T18:00:00Z",
+          "local": "2026-03-15T23:45:00+05:45"
+        }
+      },
+      {
+        "id": 6121046,
+        "name": "Tokha (SC-31) - GD Labs",
+        "locality": null,
+        "timezone": "Asia/Kathmandu",
+        "country": {
+          "id": 145,
+          "code": "NP",
+          "name": "Nepal"
+        },
+        "owner": {
+          "id": 22716,
+          "name": "Green Decision Labs and Research"
+        },
+        "provider": {
+          "id": 66,
+          "name": "AirGradient"
+        },
+        "isMobile": false,
+        "isMonitor": false,
+        "instruments": [
+          {
+            "id": 24,
+            "name": "AirGradient Open Air Generation 1 (O-1PST)"
+          }
+        ],
+        "sensors": [
+          {
+            "id": 14565152,
+            "name": "pm1 µg/m³",
+            "parameter": {
+              "id": 19,
+              "name": "pm1",
+              "units": "µg/m³",
+              "displayName": "PM1"
+            }
+          },
+          {
+            "id": 14565153,
+            "name": "pm25 µg/m³",
+            "parameter": {
+              "id": 2,
+              "name": "pm25",
+              "units": "µg/m³",
+              "displayName": "PM2.5"
+            }
+          },
+          {
+            "id": 14565154,
+            "name": "relativehumidity %",
+            "parameter": {
+              "id": 98,
+              "name": "relativehumidity",
+              "units": "%",
+              "displayName": "RH"
+            }
+          },
+          {
+            "id": 14565155,
+            "name": "temperature c",
+            "parameter": {
+              "id": 100,
+              "name": "temperature",
+              "units": "c",
+              "displayName": "Temperature (C)"
+            }
+          },
+          {
+            "id": 14565156,
+            "name": "um003 particles/cm³",
+            "parameter": {
+              "id": 125,
+              "name": "um003",
+              "units": "particles/cm³",
+              "displayName": "PM0.3 count"
+            }
+          }
+        ],
+        "coordinates": {
+          "latitude": 27.7560283,
+          "longitude": 85.3268462
+        },
+        "licenses": [
+          {
+            "id": 41,
+            "name": "CC BY 4.0",
+            "attribution": {
+              "name": "Green Decision Labs and Research",
+              "url": null
+            },
+            "dateFrom": "2023-07-15",
+            "dateTo": null
+          }
+        ],
+        "bounds": [
+          85.3268462,
+          27.7560283,
+          85.3268462,
+          27.7560283
+        ],
+        "distance": null,
+        "datetimeFirst": {
+          "utc": "2025-11-06T07:00:00Z",
+          "local": "2025-11-06T12:45:00+05:45"
+        },
+        "datetimeLast": {
+          "utc": "2026-02-07T05:00:00Z",
+          "local": "2026-02-07T10:45:00+05:45"
+        }
+      },
+      {
+        "id": 6121047,
+        "name": "Imadol(SC-27)- GD Labs",
+        "locality": null,
+        "timezone": "Asia/Kathmandu",
+        "country": {
+          "id": 145,
+          "code": "NP",
+          "name": "Nepal"
+        },
+        "owner": {
+          "id": 22716,
+          "name": "Green Decision Labs and Research"
+        },
+        "provider": {
+          "id": 66,
+          "name": "AirGradient"
+        },
+        "isMobile": false,
+        "isMonitor": false,
+        "instruments": [
+          {
+            "id": 24,
+            "name": "AirGradient Open Air Generation 1 (O-1PST)"
+          }
+        ],
+        "sensors": [
+          {
+            "id": 14565157,
+            "name": "pm1 µg/m³",
+            "parameter": {
+              "id": 19,
+              "name": "pm1",
+              "units": "µg/m³",
+              "displayName": "PM1"
+            }
+          },
+          {
+            "id": 14565158,
+            "name": "pm25 µg/m³",
+            "parameter": {
+              "id": 2,
+              "name": "pm25",
+              "units": "µg/m³",
+              "displayName": "PM2.5"
+            }
+          },
+          {
+            "id": 14565159,
+            "name": "relativehumidity %",
+            "parameter": {
+              "id": 98,
+              "name": "relativehumidity",
+              "units": "%",
+              "displayName": "RH"
+            }
+          },
+          {
+            "id": 14565160,
+            "name": "temperature c",
+            "parameter": {
+              "id": 100,
+              "name": "temperature",
+              "units": "c",
+              "displayName": "Temperature (C)"
+            }
+          },
+          {
+            "id": 14565161,
+            "name": "um003 particles/cm³",
+            "parameter": {
+              "id": 125,
+              "name": "um003",
+              "units": "particles/cm³",
+              "displayName": "PM0.3 count"
+            }
+          }
+        ],
+        "coordinates": {
+          "latitude": 27.661062,
+          "longitude": 85.347716
+        },
+        "licenses": [
+          {
+            "id": 41,
+            "name": "CC BY 4.0",
+            "attribution": {
+              "name": "Green Decision Labs and Research",
+              "url": null
+            },
+            "dateFrom": "2023-07-15",
+            "dateTo": null
+          }
+        ],
+        "bounds": [
+          85.347716,
+          27.661062,
+          85.347716,
+          27.661062
+        ],
+        "distance": null,
+        "datetimeFirst": {
+          "utc": "2025-11-06T07:00:00Z",
+          "local": "2025-11-06T12:45:00+05:45"
+        },
+        "datetimeLast": {
+          "utc": "2026-03-15T18:00:00Z",
+          "local": "2026-03-15T23:45:00+05:45"
+        }
+      },
+      {
+        "id": 6121083,
+        "name": "Balkumari(SC-28)- GD Labs",
+        "locality": null,
+        "timezone": "Asia/Kathmandu",
+        "country": {
+          "id": 145,
+          "code": "NP",
+          "name": "Nepal"
+        },
+        "owner": {
+          "id": 22716,
+          "name": "Green Decision Labs and Research"
+        },
+        "provider": {
+          "id": 66,
+          "name": "AirGradient"
+        },
+        "isMobile": false,
+        "isMonitor": false,
+        "instruments": [
+          {
+            "id": 24,
+            "name": "AirGradient Open Air Generation 1 (O-1PST)"
+          }
+        ],
+        "sensors": [
+          {
+            "id": 14565417,
+            "name": "pm1 µg/m³",
+            "parameter": {
+              "id": 19,
+              "name": "pm1",
+              "units": "µg/m³",
+              "displayName": "PM1"
+            }
+          },
+          {
+            "id": 14565418,
+            "name": "pm25 µg/m³",
+            "parameter": {
+              "id": 2,
+              "name": "pm25",
+              "units": "µg/m³",
+              "displayName": "PM2.5"
+            }
+          },
+          {
+            "id": 14565419,
+            "name": "relativehumidity %",
+            "parameter": {
+              "id": 98,
+              "name": "relativehumidity",
+              "units": "%",
+              "displayName": "RH"
+            }
+          },
+          {
+            "id": 14565420,
+            "name": "temperature c",
+            "parameter": {
+              "id": 100,
+              "name": "temperature",
+              "units": "c",
+              "displayName": "Temperature (C)"
+            }
+          },
+          {
+            "id": 14565421,
+            "name": "um003 particles/cm³",
+            "parameter": {
+              "id": 125,
+              "name": "um003",
+              "units": "particles/cm³",
+              "displayName": "PM0.3 count"
+            }
+          }
+        ],
+        "coordinates": {
+          "latitude": 27.671069,
+          "longitude": 85.338037
+        },
+        "licenses": [
+          {
+            "id": 41,
+            "name": "CC BY 4.0",
+            "attribution": {
+              "name": "Green Decision Labs and Research",
+              "url": null
+            },
+            "dateFrom": "2023-07-15",
+            "dateTo": null
+          }
+        ],
+        "bounds": [
+          85.338037,
+          27.671069,
+          85.338037,
+          27.671069
+        ],
+        "distance": null,
+        "datetimeFirst": {
+          "utc": "2025-11-06T08:00:00Z",
+          "local": "2025-11-06T13:45:00+05:45"
+        },
+        "datetimeLast": {
+          "utc": "2026-03-15T08:00:00Z",
+          "local": "2026-03-15T13:45:00+05:45"
+        }
+      },
+      {
+        "id": 6121118,
+        "name": "Tokha (SC - 32) - GD Labs",
+        "locality": null,
+        "timezone": "Asia/Kathmandu",
+        "country": {
+          "id": 145,
+          "code": "NP",
+          "name": "Nepal"
+        },
+        "owner": {
+          "id": 22716,
+          "name": "Green Decision Labs and Research"
+        },
+        "provider": {
+          "id": 66,
+          "name": "AirGradient"
+        },
+        "isMobile": false,
+        "isMonitor": false,
+        "instruments": [
+          {
+            "id": 24,
+            "name": "AirGradient Open Air Generation 1 (O-1PST)"
+          }
+        ],
+        "sensors": [
+          {
+            "id": 14565677,
+            "name": "pm1 µg/m³",
+            "parameter": {
+              "id": 19,
+              "name": "pm1",
+              "units": "µg/m³",
+              "displayName": "PM1"
+            }
+          },
+          {
+            "id": 14565678,
+            "name": "pm25 µg/m³",
+            "parameter": {
+              "id": 2,
+              "name": "pm25",
+              "units": "µg/m³",
+              "displayName": "PM2.5"
+            }
+          },
+          {
+            "id": 14565679,
+            "name": "relativehumidity %",
+            "parameter": {
+              "id": 98,
+              "name": "relativehumidity",
+              "units": "%",
+              "displayName": "RH"
+            }
+          },
+          {
+            "id": 14565680,
+            "name": "temperature c",
+            "parameter": {
+              "id": 100,
+              "name": "temperature",
+              "units": "c",
+              "displayName": "Temperature (C)"
+            }
+          },
+          {
+            "id": 14565681,
+            "name": "um003 particles/cm³",
+            "parameter": {
+              "id": 125,
+              "name": "um003",
+              "units": "particles/cm³",
+              "displayName": "PM0.3 count"
+            }
+          }
+        ],
+        "coordinates": {
+          "latitude": 27.7376474,
+          "longitude": 85.319391
+        },
+        "licenses": [
+          {
+            "id": 41,
+            "name": "CC BY 4.0",
+            "attribution": {
+              "name": "Green Decision Labs and Research",
+              "url": null
+            },
+            "dateFrom": "2023-07-15",
+            "dateTo": null
+          }
+        ],
+        "bounds": [
+          85.319391,
+          27.7376474,
+          85.319391,
+          27.7376474
+        ],
+        "distance": null,
+        "datetimeFirst": {
+          "utc": "2025-11-06T09:00:00Z",
+          "local": "2025-11-06T14:45:00+05:45"
+        },
+        "datetimeLast": {
+          "utc": "2026-03-15T18:00:00Z",
+          "local": "2026-03-15T23:45:00+05:45"
+        }
+      },
+      {
+        "id": 6121225,
+        "name": "Kaushaltar (SC - 33) GD labs",
+        "locality": null,
+        "timezone": "Asia/Kathmandu",
+        "country": {
+          "id": 145,
+          "code": "NP",
+          "name": "Nepal"
+        },
+        "owner": {
+          "id": 22716,
+          "name": "Green Decision Labs and Research"
+        },
+        "provider": {
+          "id": 66,
+          "name": "AirGradient"
+        },
+        "isMobile": false,
+        "isMonitor": false,
+        "instruments": [
+          {
+            "id": 24,
+            "name": "AirGradient Open Air Generation 1 (O-1PST)"
+          }
+        ],
+        "sensors": [
+          {
+            "id": 14566456,
+            "name": "pm1 µg/m³",
+            "parameter": {
+              "id": 19,
+              "name": "pm1",
+              "units": "µg/m³",
+              "displayName": "PM1"
+            }
+          },
+          {
+            "id": 14566457,
+            "name": "pm25 µg/m³",
+            "parameter": {
+              "id": 2,
+              "name": "pm25",
+              "units": "µg/m³",
+              "displayName": "PM2.5"
+            }
+          },
+          {
+            "id": 14566458,
+            "name": "relativehumidity %",
+            "parameter": {
+              "id": 98,
+              "name": "relativehumidity",
+              "units": "%",
+              "displayName": "RH"
+            }
+          },
+          {
+            "id": 14566459,
+            "name": "temperature c",
+            "parameter": {
+              "id": 100,
+              "name": "temperature",
+              "units": "c",
+              "displayName": "Temperature (C)"
+            }
+          },
+          {
+            "id": 14566460,
+            "name": "um003 particles/cm³",
+            "parameter": {
+              "id": 125,
+              "name": "um003",
+              "units": "particles/cm³",
+              "displayName": "PM0.3 count"
+            }
+          }
+        ],
+        "coordinates": {
+          "latitude": 27.6724803,
+          "longitude": 85.3617649
+        },
+        "licenses": [
+          {
+            "id": 41,
+            "name": "CC BY 4.0",
+            "attribution": {
+              "name": "Green Decision Labs and Research",
+              "url": null
+            },
+            "dateFrom": "2023-07-15",
+            "dateTo": null
+          }
+        ],
+        "bounds": [
+          85.3617649,
+          27.6724803,
+          85.3617649,
+          27.6724803
+        ],
+        "distance": null,
+        "datetimeFirst": {
+          "utc": "2025-11-06T11:00:00Z",
+          "local": "2025-11-06T16:45:00+05:45"
+        },
+        "datetimeLast": {
+          "utc": "2026-03-15T18:00:00Z",
+          "local": "2026-03-15T23:45:00+05:45"
+        }
+      },
+      {
+        "id": 6128821,
+        "name": "Kadhaghari (SC-42)-GD Labs",
+        "locality": null,
+        "timezone": "Asia/Kathmandu",
+        "country": {
+          "id": 145,
+          "code": "NP",
+          "name": "Nepal"
+        },
+        "owner": {
+          "id": 22716,
+          "name": "Green Decision Labs and Research"
+        },
+        "provider": {
+          "id": 66,
+          "name": "AirGradient"
+        },
+        "isMobile": false,
+        "isMonitor": false,
+        "instruments": [
+          {
+            "id": 24,
+            "name": "AirGradient Open Air Generation 1 (O-1PST)"
+          }
+        ],
+        "sensors": [
+          {
+            "id": 14623360,
+            "name": "pm1 µg/m³",
+            "parameter": {
+              "id": 19,
+              "name": "pm1",
+              "units": "µg/m³",
+              "displayName": "PM1"
+            }
+          },
+          {
+            "id": 14623361,
+            "name": "pm25 µg/m³",
+            "parameter": {
+              "id": 2,
+              "name": "pm25",
+              "units": "µg/m³",
+              "displayName": "PM2.5"
+            }
+          },
+          {
+            "id": 14623362,
+            "name": "relativehumidity %",
+            "parameter": {
+              "id": 98,
+              "name": "relativehumidity",
+              "units": "%",
+              "displayName": "RH"
+            }
+          },
+          {
+            "id": 14623363,
+            "name": "temperature c",
+            "parameter": {
+              "id": 100,
+              "name": "temperature",
+              "units": "c",
+              "displayName": "Temperature (C)"
+            }
+          },
+          {
+            "id": 14623364,
+            "name": "um003 particles/cm³",
+            "parameter": {
+              "id": 125,
+              "name": "um003",
+              "units": "particles/cm³",
+              "displayName": "PM0.3 count"
+            }
+          }
+        ],
+        "coordinates": {
+          "latitude": 27.696521,
+          "longitude": 85.369882
+        },
+        "licenses": [
+          {
+            "id": 41,
+            "name": "CC BY 4.0",
+            "attribution": {
+              "name": "Green Decision Labs and Research",
+              "url": null
+            },
+            "dateFrom": "2023-07-15",
+            "dateTo": null
+          }
+        ],
+        "bounds": [
+          85.369882,
+          27.696521,
+          85.369882,
+          27.696521
+        ],
+        "distance": null,
+        "datetimeFirst": {
+          "utc": "2025-11-13T08:00:00Z",
+          "local": "2025-11-13T13:45:00+05:45"
+        },
+        "datetimeLast": {
+          "utc": "2026-03-15T10:00:00Z",
+          "local": "2026-03-15T15:45:00+05:45"
+        }
+      },
+      {
+        "id": 6133623,
+        "name": "Jadibuti (SC-35)-GD Labs",
+        "locality": null,
+        "timezone": "Asia/Kathmandu",
+        "country": {
+          "id": 145,
+          "code": "NP",
+          "name": "Nepal"
+        },
+        "owner": {
+          "id": 22716,
+          "name": "Green Decision Labs and Research"
+        },
+        "provider": {
+          "id": 66,
+          "name": "AirGradient"
+        },
+        "isMobile": false,
+        "isMonitor": false,
+        "instruments": [
+          {
+            "id": 24,
+            "name": "AirGradient Open Air Generation 1 (O-1PST)"
+          }
+        ],
+        "sensors": [
+          {
+            "id": 14659110,
+            "name": "pm1 µg/m³",
+            "parameter": {
+              "id": 19,
+              "name": "pm1",
+              "units": "µg/m³",
+              "displayName": "PM1"
+            }
+          },
+          {
+            "id": 14659111,
+            "name": "pm25 µg/m³",
+            "parameter": {
+              "id": 2,
+              "name": "pm25",
+              "units": "µg/m³",
+              "displayName": "PM2.5"
+            }
+          },
+          {
+            "id": 14659112,
+            "name": "relativehumidity %",
+            "parameter": {
+              "id": 98,
+              "name": "relativehumidity",
+              "units": "%",
+              "displayName": "RH"
+            }
+          },
+          {
+            "id": 14659113,
+            "name": "temperature c",
+            "parameter": {
+              "id": 100,
+              "name": "temperature",
+              "units": "c",
+              "displayName": "Temperature (C)"
+            }
+          },
+          {
+            "id": 14659114,
+            "name": "um003 particles/cm³",
+            "parameter": {
+              "id": 125,
+              "name": "um003",
+              "units": "particles/cm³",
+              "displayName": "PM0.3 count"
+            }
+          }
+        ],
+        "coordinates": {
+          "latitude": 27.682109,
+          "longitude": 85.354791
+        },
+        "licenses": [
+          {
+            "id": 41,
+            "name": "CC BY 4.0",
+            "attribution": {
+              "name": "Green Decision Labs and Research",
+              "url": null
+            },
+            "dateFrom": "2023-07-15",
+            "dateTo": null
+          }
+        ],
+        "bounds": [
+          85.354791,
+          27.682109,
+          85.354791,
+          27.682109
+        ],
+        "distance": null,
+        "datetimeFirst": {
+          "utc": "2025-11-17T10:00:00Z",
+          "local": "2025-11-17T15:45:00+05:45"
+        },
+        "datetimeLast": {
+          "utc": "2026-03-15T18:00:00Z",
+          "local": "2026-03-15T23:45:00+05:45"
+        }
+      },
+      {
+        "id": 6138068,
+        "name": "Purano naikap (SC-29)-GD Labs",
+        "locality": null,
+        "timezone": "Asia/Kathmandu",
+        "country": {
+          "id": 145,
+          "code": "NP",
+          "name": "Nepal"
+        },
+        "owner": {
+          "id": 12,
+          "name": "AirGradient"
+        },
+        "provider": {
+          "id": 66,
+          "name": "AirGradient"
+        },
+        "isMobile": false,
+        "isMonitor": false,
+        "instruments": [
+          {
+            "id": 7,
+            "name": "Unknown AirGradient Sensor"
+          }
+        ],
+        "sensors": [
+          {
+            "id": 14802206,
+            "name": "pm1 µg/m³",
+            "parameter": {
+              "id": 19,
+              "name": "pm1",
+              "units": "µg/m³",
+              "displayName": "PM1"
+            }
+          },
+          {
+            "id": 14802207,
+            "name": "pm25 µg/m³",
+            "parameter": {
+              "id": 2,
+              "name": "pm25",
+              "units": "µg/m³",
+              "displayName": "PM2.5"
+            }
+          },
+          {
+            "id": 14802208,
+            "name": "relativehumidity %",
+            "parameter": {
+              "id": 98,
+              "name": "relativehumidity",
+              "units": "%",
+              "displayName": "RH"
+            }
+          },
+          {
+            "id": 14802209,
+            "name": "temperature c",
+            "parameter": {
+              "id": 100,
+              "name": "temperature",
+              "units": "c",
+              "displayName": "Temperature (C)"
+            }
+          },
+          {
+            "id": 14802210,
+            "name": "um003 particles/cm³",
+            "parameter": {
+              "id": 125,
+              "name": "um003",
+              "units": "particles/cm³",
+              "displayName": "PM0.3 count"
+            }
+          }
+        ],
+        "coordinates": {
+          "latitude": 27.705718,
+          "longitude": 85.255141
+        },
+        "licenses": [
+          {
+            "id": 41,
+            "name": "CC BY 4.0",
+            "attribution": {
+              "name": "AirGradient",
+              "url": null
+            },
+            "dateFrom": "2023-07-15",
+            "dateTo": null
+          }
+        ],
+        "bounds": [
+          85.255141,
+          27.705718,
+          85.255141,
+          27.705718
+        ],
+        "distance": null,
+        "datetimeFirst": {
+          "utc": "2025-12-05T05:00:00Z",
+          "local": "2025-12-05T10:45:00+05:45"
+        },
+        "datetimeLast": {
+          "utc": "2026-01-23T05:00:00Z",
+          "local": "2026-01-23T10:45:00+05:45"
+        }
+      },
+      {
+        "id": 6141873,
+        "name": "Khokana (SC-41)-GD Labs",
+        "locality": null,
+        "timezone": "Asia/Kathmandu",
+        "country": {
+          "id": 145,
+          "code": "NP",
+          "name": "Nepal"
+        },
+        "owner": {
+          "id": 22716,
+          "name": "Green Decision Labs and Research"
+        },
+        "provider": {
+          "id": 66,
+          "name": "AirGradient"
+        },
+        "isMobile": false,
+        "isMonitor": false,
+        "instruments": [
+          {
+            "id": 22,
+            "name": "AirGradient ONE Generation 9 (I-9PSL-DE)"
+          }
+        ],
+        "sensors": [
+          {
+            "id": 14718255,
+            "name": "pm1 µg/m³",
+            "parameter": {
+              "id": 19,
+              "name": "pm1",
+              "units": "µg/m³",
+              "displayName": "PM1"
+            }
+          },
+          {
+            "id": 14718256,
+            "name": "pm25 µg/m³",
+            "parameter": {
+              "id": 2,
+              "name": "pm25",
+              "units": "µg/m³",
+              "displayName": "PM2.5"
+            }
+          },
+          {
+            "id": 14718257,
+            "name": "relativehumidity %",
+            "parameter": {
+              "id": 98,
+              "name": "relativehumidity",
+              "units": "%",
+              "displayName": "RH"
+            }
+          },
+          {
+            "id": 14718258,
+            "name": "temperature c",
+            "parameter": {
+              "id": 100,
+              "name": "temperature",
+              "units": "c",
+              "displayName": "Temperature (C)"
+            }
+          },
+          {
+            "id": 14718259,
+            "name": "um003 particles/cm³",
+            "parameter": {
+              "id": 125,
+              "name": "um003",
+              "units": "particles/cm³",
+              "displayName": "PM0.3 count"
+            }
+          }
+        ],
+        "coordinates": {
+          "latitude": 27.637633,
+          "longitude": 85.301661
+        },
+        "licenses": [
+          {
+            "id": 41,
+            "name": "CC BY 4.0",
+            "attribution": {
+              "name": "Green Decision Labs and Research",
+              "url": null
+            },
+            "dateFrom": "2023-07-15",
+            "dateTo": null
+          }
+        ],
+        "bounds": [
+          85.301661,
+          27.637633,
+          85.301661,
+          27.637633
+        ],
+        "distance": null,
+        "datetimeFirst": {
+          "utc": "2025-11-25T06:00:00Z",
+          "local": "2025-11-25T11:45:00+05:45"
+        },
+        "datetimeLast": {
+          "utc": "2026-03-15T18:00:00Z",
+          "local": "2026-03-15T23:45:00+05:45"
+        }
+      },
+      {
+        "id": 6141912,
+        "name": "Kupondole (SC-40)-GD Labs",
+        "locality": null,
+        "timezone": "Asia/Kathmandu",
+        "country": {
+          "id": 145,
+          "code": "NP",
+          "name": "Nepal"
+        },
+        "owner": {
+          "id": 22716,
+          "name": "Green Decision Labs and Research"
+        },
+        "provider": {
+          "id": 66,
+          "name": "AirGradient"
+        },
+        "isMobile": false,
+        "isMonitor": false,
+        "instruments": [
+          {
+            "id": 24,
+            "name": "AirGradient Open Air Generation 1 (O-1PST)"
+          }
+        ],
+        "sensors": [
+          {
+            "id": 14718800,
+            "name": "pm1 µg/m³",
+            "parameter": {
+              "id": 19,
+              "name": "pm1",
+              "units": "µg/m³",
+              "displayName": "PM1"
+            }
+          },
+          {
+            "id": 14718801,
+            "name": "pm25 µg/m³",
+            "parameter": {
+              "id": 2,
+              "name": "pm25",
+              "units": "µg/m³",
+              "displayName": "PM2.5"
+            }
+          },
+          {
+            "id": 14718802,
+            "name": "relativehumidity %",
+            "parameter": {
+              "id": 98,
+              "name": "relativehumidity",
+              "units": "%",
+              "displayName": "RH"
+            }
+          },
+          {
+            "id": 14718803,
+            "name": "temperature c",
+            "parameter": {
+              "id": 100,
+              "name": "temperature",
+              "units": "c",
+              "displayName": "Temperature (C)"
+            }
+          },
+          {
+            "id": 14718804,
+            "name": "um003 particles/cm³",
+            "parameter": {
+              "id": 125,
+              "name": "um003",
+              "units": "particles/cm³",
+              "displayName": "PM0.3 count"
+            }
+          }
+        ],
+        "coordinates": {
+          "latitude": 27.689661,
+          "longitude": 85.310442
+        },
+        "licenses": [
+          {
+            "id": 41,
+            "name": "CC BY 4.0",
+            "attribution": {
+              "name": "Green Decision Labs and Research",
+              "url": null
+            },
+            "dateFrom": "2023-07-15",
+            "dateTo": null
+          }
+        ],
+        "bounds": [
+          85.310442,
+          27.689661,
+          85.310442,
+          27.689661
+        ],
+        "distance": null,
+        "datetimeFirst": {
+          "utc": "2025-11-25T08:00:00Z",
+          "local": "2025-11-25T13:45:00+05:45"
+        },
+        "datetimeLast": {
+          "utc": "2026-03-15T17:00:00Z",
+          "local": "2026-03-15T22:45:00+05:45"
+        }
+      },
+      {
+        "id": 6142022,
+        "name": "Mid Baneshwor (SC-39)-GD Labs",
+        "locality": null,
+        "timezone": "Asia/Kathmandu",
+        "country": {
+          "id": 145,
+          "code": "NP",
+          "name": "Nepal"
+        },
+        "owner": {
+          "id": 12,
+          "name": "AirGradient"
+        },
+        "provider": {
+          "id": 66,
+          "name": "AirGradient"
+        },
+        "isMobile": false,
+        "isMonitor": false,
+        "instruments": [
+          {
+            "id": 7,
+            "name": "Unknown AirGradient Sensor"
+          }
+        ],
+        "sensors": [
+          {
+            "id": 14719351,
+            "name": "pm1 µg/m³",
+            "parameter": {
+              "id": 19,
+              "name": "pm1",
+              "units": "µg/m³",
+              "displayName": "PM1"
+            }
+          },
+          {
+            "id": 14719352,
+            "name": "pm25 µg/m³",
+            "parameter": {
+              "id": 2,
+              "name": "pm25",
+              "units": "µg/m³",
+              "displayName": "PM2.5"
+            }
+          },
+          {
+            "id": 14719353,
+            "name": "relativehumidity %",
+            "parameter": {
+              "id": 98,
+              "name": "relativehumidity",
+              "units": "%",
+              "displayName": "RH"
+            }
+          },
+          {
+            "id": 14719354,
+            "name": "temperature c",
+            "parameter": {
+              "id": 100,
+              "name": "temperature",
+              "units": "c",
+              "displayName": "Temperature (C)"
+            }
+          },
+          {
+            "id": 14719355,
+            "name": "um003 particles/cm³",
+            "parameter": {
+              "id": 125,
+              "name": "um003",
+              "units": "particles/cm³",
+              "displayName": "PM0.3 count"
+            }
+          }
+        ],
+        "coordinates": {
+          "latitude": 27.693662,
+          "longitude": 85.340501
+        },
+        "licenses": [
+          {
+            "id": 41,
+            "name": "CC BY 4.0",
+            "attribution": {
+              "name": "AirGradient",
+              "url": null
+            },
+            "dateFrom": "2023-07-15",
+            "dateTo": null
+          }
+        ],
+        "bounds": [
+          85.340501,
+          27.693662,
+          85.340501,
+          27.693662
+        ],
+        "distance": null,
+        "datetimeFirst": {
+          "utc": "2025-11-25T09:00:00Z",
+          "local": "2025-11-25T14:45:00+05:45"
+        },
+        "datetimeLast": {
+          "utc": "2026-01-23T08:00:00Z",
+          "local": "2026-01-23T13:45:00+05:45"
+        }
+      },
+      {
+        "id": 6142174,
+        "name": "Ranibari (SC-43)-GD Labs",
+        "locality": null,
+        "timezone": "Asia/Kathmandu",
+        "country": {
+          "id": 145,
+          "code": "NP",
+          "name": "Nepal"
+        },
+        "owner": {
+          "id": 12,
+          "name": "AirGradient"
+        },
+        "provider": {
+          "id": 66,
+          "name": "AirGradient"
+        },
+        "isMobile": false,
+        "isMonitor": false,
+        "instruments": [
+          {
+            "id": 7,
+            "name": "Unknown AirGradient Sensor"
+          }
+        ],
+        "sensors": [
+          {
+            "id": 14720441,
+            "name": "pm1 µg/m³",
+            "parameter": {
+              "id": 19,
+              "name": "pm1",
+              "units": "µg/m³",
+              "displayName": "PM1"
+            }
+          },
+          {
+            "id": 14720442,
+            "name": "pm25 µg/m³",
+            "parameter": {
+              "id": 2,
+              "name": "pm25",
+              "units": "µg/m³",
+              "displayName": "PM2.5"
+            }
+          },
+          {
+            "id": 14720443,
+            "name": "relativehumidity %",
+            "parameter": {
+              "id": 98,
+              "name": "relativehumidity",
+              "units": "%",
+              "displayName": "RH"
+            }
+          },
+          {
+            "id": 14720444,
+            "name": "temperature c",
+            "parameter": {
+              "id": 100,
+              "name": "temperature",
+              "units": "c",
+              "displayName": "Temperature (C)"
+            }
+          },
+          {
+            "id": 14720445,
+            "name": "um003 particles/cm³",
+            "parameter": {
+              "id": 125,
+              "name": "um003",
+              "units": "particles/cm³",
+              "displayName": "PM0.3 count"
+            }
+          }
+        ],
+        "coordinates": {
+          "latitude": 27.727562,
+          "longitude": 85.321155
+        },
+        "licenses": [
+          {
+            "id": 41,
+            "name": "CC BY 4.0",
+            "attribution": {
+              "name": "AirGradient",
+              "url": null
+            },
+            "dateFrom": "2023-07-15",
+            "dateTo": null
+          }
+        ],
+        "bounds": [
+          85.321155,
+          27.727562,
+          85.321155,
+          27.727562
+        ],
+        "distance": null,
+        "datetimeFirst": {
+          "utc": "2025-11-25T11:00:00Z",
+          "local": "2025-11-25T16:45:00+05:45"
+        },
+        "datetimeLast": {
+          "utc": "2026-03-15T18:00:00Z",
+          "local": "2026-03-15T23:45:00+05:45"
+        }
+      },
+      {
+        "id": 6142175,
+        "name": "Sorakhutte (SC-36)-GD Labs",
+        "locality": null,
+        "timezone": "Asia/Kathmandu",
+        "country": {
+          "id": 145,
+          "code": "NP",
+          "name": "Nepal"
+        },
+        "owner": {
+          "id": 12,
+          "name": "AirGradient"
+        },
+        "provider": {
+          "id": 66,
+          "name": "AirGradient"
+        },
+        "isMobile": false,
+        "isMonitor": false,
+        "instruments": [
+          {
+            "id": 7,
+            "name": "Unknown AirGradient Sensor"
+          }
+        ],
+        "sensors": [
+          {
+            "id": 14720446,
+            "name": "pm1 µg/m³",
+            "parameter": {
+              "id": 19,
+              "name": "pm1",
+              "units": "µg/m³",
+              "displayName": "PM1"
+            }
+          },
+          {
+            "id": 14720447,
+            "name": "pm25 µg/m³",
+            "parameter": {
+              "id": 2,
+              "name": "pm25",
+              "units": "µg/m³",
+              "displayName": "PM2.5"
+            }
+          },
+          {
+            "id": 14720448,
+            "name": "relativehumidity %",
+            "parameter": {
+              "id": 98,
+              "name": "relativehumidity",
+              "units": "%",
+              "displayName": "RH"
+            }
+          },
+          {
+            "id": 14720449,
+            "name": "temperature c",
+            "parameter": {
+              "id": 100,
+              "name": "temperature",
+              "units": "c",
+              "displayName": "Temperature (C)"
+            }
+          },
+          {
+            "id": 14720450,
+            "name": "um003 particles/cm³",
+            "parameter": {
+              "id": 125,
+              "name": "um003",
+              "units": "particles/cm³",
+              "displayName": "PM0.3 count"
+            }
+          }
+        ],
+        "coordinates": {
+          "latitude": 27.71847,
+          "longitude": 85.310271
+        },
+        "licenses": [
+          {
+            "id": 41,
+            "name": "CC BY 4.0",
+            "attribution": {
+              "name": "AirGradient",
+              "url": null
+            },
+            "dateFrom": "2023-07-15",
+            "dateTo": null
+          }
+        ],
+        "bounds": [
+          85.310271,
+          27.71847,
+          85.310271,
+          27.71847
+        ],
+        "distance": null,
+        "datetimeFirst": {
+          "utc": "2025-11-25T10:00:00Z",
+          "local": "2025-11-25T15:45:00+05:45"
+        },
+        "datetimeLast": {
+          "utc": "2026-02-10T19:00:00Z",
+          "local": "2026-02-11T00:45:00+05:45"
+        }
+      },
+      {
+        "id": 6151750,
+        "name": "Pulchowk (SC-15)-GD Labs",
+        "locality": null,
+        "timezone": "Asia/Kathmandu",
+        "country": {
+          "id": 145,
+          "code": "NP",
+          "name": "Nepal"
+        },
+        "owner": {
+          "id": 12,
+          "name": "AirGradient"
+        },
+        "provider": {
+          "id": 66,
+          "name": "AirGradient"
+        },
+        "isMobile": false,
+        "isMonitor": false,
+        "instruments": [
+          {
+            "id": 7,
+            "name": "Unknown AirGradient Sensor"
+          }
+        ],
+        "sensors": [
+          {
+            "id": 14792688,
+            "name": "pm1 µg/m³",
+            "parameter": {
+              "id": 19,
+              "name": "pm1",
+              "units": "µg/m³",
+              "displayName": "PM1"
+            }
+          },
+          {
+            "id": 14792689,
+            "name": "pm25 µg/m³",
+            "parameter": {
+              "id": 2,
+              "name": "pm25",
+              "units": "µg/m³",
+              "displayName": "PM2.5"
+            }
+          },
+          {
+            "id": 14792690,
+            "name": "relativehumidity %",
+            "parameter": {
+              "id": 98,
+              "name": "relativehumidity",
+              "units": "%",
+              "displayName": "RH"
+            }
+          },
+          {
+            "id": 14792691,
+            "name": "temperature c",
+            "parameter": {
+              "id": 100,
+              "name": "temperature",
+              "units": "c",
+              "displayName": "Temperature (C)"
+            }
+          },
+          {
+            "id": 14792692,
+            "name": "um003 particles/cm³",
+            "parameter": {
+              "id": 125,
+              "name": "um003",
+              "units": "particles/cm³",
+              "displayName": "PM0.3 count"
+            }
+          }
+        ],
+        "coordinates": {
+          "latitude": 27.676946,
+          "longitude": 85.318494
+        },
+        "licenses": [
+          {
+            "id": 41,
+            "name": "CC BY 4.0",
+            "attribution": {
+              "name": "AirGradient",
+              "url": null
+            },
+            "dateFrom": "2023-07-15",
+            "dateTo": null
+          }
+        ],
+        "bounds": [
+          85.318494,
+          27.676946,
+          85.318494,
+          27.676946
+        ],
+        "distance": null,
+        "datetimeFirst": {
+          "utc": "2025-12-04T05:00:00Z",
+          "local": "2025-12-04T10:45:00+05:45"
+        },
+        "datetimeLast": {
+          "utc": "2025-12-04T05:00:00Z",
+          "local": "2025-12-04T10:45:00+05:45"
+        }
+      },
+      {
+        "id": 6151854,
+        "name": "Haugal Ganesh Temple, Patan Durbar Square",
+        "locality": null,
+        "timezone": "Asia/Kathmandu",
+        "country": {
+          "id": 145,
+          "code": "NP",
+          "name": "Nepal"
+        },
+        "owner": {
+          "id": 12,
+          "name": "AirGradient"
+        },
+        "provider": {
+          "id": 66,
+          "name": "AirGradient"
+        },
+        "isMobile": false,
+        "isMonitor": false,
+        "instruments": [
+          {
+            "id": 7,
+            "name": "Unknown AirGradient Sensor"
+          }
+        ],
+        "sensors": [
+          {
+            "id": 14793465,
+            "name": "pm1 µg/m³",
+            "parameter": {
+              "id": 19,
+              "name": "pm1",
+              "units": "µg/m³",
+              "displayName": "PM1"
+            }
+          },
+          {
+            "id": 14793466,
+            "name": "pm25 µg/m³",
+            "parameter": {
+              "id": 2,
+              "name": "pm25",
+              "units": "µg/m³",
+              "displayName": "PM2.5"
+            }
+          },
+          {
+            "id": 14793467,
+            "name": "relativehumidity %",
+            "parameter": {
+              "id": 98,
+              "name": "relativehumidity",
+              "units": "%",
+              "displayName": "RH"
+            }
+          },
+          {
+            "id": 14793468,
+            "name": "temperature c",
+            "parameter": {
+              "id": 100,
+              "name": "temperature",
+              "units": "c",
+              "displayName": "Temperature (C)"
+            }
+          },
+          {
+            "id": 14793469,
+            "name": "um003 particles/cm³",
+            "parameter": {
+              "id": 125,
+              "name": "um003",
+              "units": "particles/cm³",
+              "displayName": "PM0.3 count"
+            }
+          }
+        ],
+        "coordinates": {
+          "latitude": 27.671944,
+          "longitude": 85.324444
+        },
+        "licenses": [
+          {
+            "id": 41,
+            "name": "CC BY 4.0",
+            "attribution": {
+              "name": "AirGradient",
+              "url": null
+            },
+            "dateFrom": "2023-07-15",
+            "dateTo": null
+          }
+        ],
+        "bounds": [
+          85.324444,
+          27.671944,
+          85.324444,
+          27.671944
+        ],
+        "distance": null,
+        "datetimeFirst": {
+          "utc": "2025-12-04T05:00:00Z",
+          "local": "2025-12-04T10:45:00+05:45"
+        },
+        "datetimeLast": {
+          "utc": "2026-01-22T22:00:00Z",
+          "local": "2026-01-23T03:45:00+05:45"
+        }
+      },
+      {
+        "id": 6176215,
+        "name": "Tripureshowr (SC-24)- GD Labs",
+        "locality": null,
+        "timezone": "Asia/Kathmandu",
+        "country": {
+          "id": 145,
+          "code": "NP",
+          "name": "Nepal"
+        },
+        "owner": {
+          "id": 22716,
+          "name": "Green Decision Labs and Research"
+        },
+        "provider": {
+          "id": 66,
+          "name": "AirGradient"
+        },
+        "isMobile": false,
+        "isMonitor": false,
+        "instruments": [
+          {
+            "id": 24,
+            "name": "AirGradient Open Air Generation 1 (O-1PST)"
+          }
+        ],
+        "sensors": [
+          {
+            "id": 14974920,
+            "name": "pm1 µg/m³",
+            "parameter": {
+              "id": 19,
+              "name": "pm1",
+              "units": "µg/m³",
+              "displayName": "PM1"
+            }
+          },
+          {
+            "id": 14974921,
+            "name": "pm25 µg/m³",
+            "parameter": {
+              "id": 2,
+              "name": "pm25",
+              "units": "µg/m³",
+              "displayName": "PM2.5"
+            }
+          },
+          {
+            "id": 14974922,
+            "name": "relativehumidity %",
+            "parameter": {
+              "id": 98,
+              "name": "relativehumidity",
+              "units": "%",
+              "displayName": "RH"
+            }
+          },
+          {
+            "id": 14974923,
+            "name": "temperature c",
+            "parameter": {
+              "id": 100,
+              "name": "temperature",
+              "units": "c",
+              "displayName": "Temperature (C)"
+            }
+          },
+          {
+            "id": 14974924,
+            "name": "um003 particles/cm³",
+            "parameter": {
+              "id": 125,
+              "name": "um003",
+              "units": "particles/cm³",
+              "displayName": "PM0.3 count"
+            }
+          }
+        ],
+        "coordinates": {
+          "latitude": 27.692998,
+          "longitude": 85.312458
+        },
+        "licenses": [
+          {
+            "id": 41,
+            "name": "CC BY 4.0",
+            "attribution": {
+              "name": "Green Decision Labs and Research",
+              "url": null
+            },
+            "dateFrom": "2023-07-15",
+            "dateTo": null
+          }
+        ],
+        "bounds": [
+          85.312458,
+          27.692998,
+          85.312458,
+          27.692998
+        ],
+        "distance": null,
+        "datetimeFirst": {
+          "utc": "2025-12-24T07:00:00Z",
+          "local": "2025-12-24T12:45:00+05:45"
+        },
+        "datetimeLast": {
+          "utc": "2026-03-15T18:00:00Z",
+          "local": "2026-03-15T23:45:00+05:45"
+        }
+      },
+      {
+        "id": 6230465,
+        "name": "Bagdol",
+        "locality": null,
+        "timezone": "Asia/Kathmandu",
+        "country": {
+          "id": 145,
+          "code": "NP",
+          "name": "Nepal"
+        },
+        "owner": {
+          "id": 12,
+          "name": "AirGradient"
+        },
+        "provider": {
+          "id": 66,
+          "name": "AirGradient"
+        },
+        "isMobile": false,
+        "isMonitor": false,
+        "instruments": [
+          {
+            "id": 7,
+            "name": "Unknown AirGradient Sensor"
+          }
+        ],
+        "sensors": [
+          {
+            "id": 15374667,
+            "name": "pm1 µg/m³",
+            "parameter": {
+              "id": 19,
+              "name": "pm1",
+              "units": "µg/m³",
+              "displayName": "PM1"
+            }
+          },
+          {
+            "id": 15374668,
+            "name": "pm25 µg/m³",
+            "parameter": {
+              "id": 2,
+              "name": "pm25",
+              "units": "µg/m³",
+              "displayName": "PM2.5"
+            }
+          },
+          {
+            "id": 15374669,
+            "name": "relativehumidity %",
+            "parameter": {
+              "id": 98,
+              "name": "relativehumidity",
+              "units": "%",
+              "displayName": "RH"
+            }
+          },
+          {
+            "id": 15374670,
+            "name": "temperature c",
+            "parameter": {
+              "id": 100,
+              "name": "temperature",
+              "units": "c",
+              "displayName": "Temperature (C)"
+            }
+          },
+          {
+            "id": 15374671,
+            "name": "um003 particles/cm³",
+            "parameter": {
+              "id": 125,
+              "name": "um003",
+              "units": "particles/cm³",
+              "displayName": "PM0.3 count"
+            }
+          }
+        ],
+        "coordinates": {
+          "latitude": 27.671706,
+          "longitude": 85.301619
+        },
+        "licenses": [
+          {
+            "id": 41,
+            "name": "CC BY 4.0",
+            "attribution": {
+              "name": "AirGradient",
+              "url": null
+            },
+            "dateFrom": "2023-07-15",
+            "dateTo": null
+          }
+        ],
+        "bounds": [
+          85.301619,
+          27.671706,
+          85.301619,
+          27.671706
+        ],
+        "distance": null,
+        "datetimeFirst": {
+          "utc": "2026-02-06T09:00:00Z",
+          "local": "2026-02-06T14:45:00+05:45"
+        },
+        "datetimeLast": {
+          "utc": "2026-03-15T18:00:00Z",
+          "local": "2026-03-15T23:45:00+05:45"
+        }
+      }
+    ]
+  },
+  "latest_by_location_id": {
+    "3459": {
+      "meta": {
+        "name": "openaq-api",
+        "website": "/",
+        "page": 1,
+        "limit": 100,
+        "found": 2
+      },
+      "results": [
+        {
+          "datetime": {
+            "utc": "2025-03-04T12:15:00Z",
+            "local": "2025-03-04T18:00:00+05:45"
+          },
+          "value": -0.999,
+          "coordinates": {
+            "latitude": 27.738703,
+            "longitude": 85.336206
+          },
+          "sensorsId": 7713,
+          "locationsId": 3459
+        },
+        {
+          "datetime": {
+            "utc": "2026-03-15T18:15:00Z",
+            "local": "2026-03-16T00:00:00+05:45"
+          },
+          "value": 20.0,
+          "coordinates": {
+            "latitude": 27.738703,
+            "longitude": 85.336206
+          },
+          "sensorsId": 7710,
+          "locationsId": 3459
+        }
+      ]
+    },
+    "3460": {
+      "meta": {
+        "name": "openaq-api",
+        "website": "/",
+        "page": 1,
+        "limit": 100,
+        "found": 2
+      },
+      "results": [
+        {
+          "datetime": {
+            "utc": "2025-03-04T12:15:00Z",
+            "local": "2025-03-04T18:00:00+05:45"
+          },
+          "value": -0.999,
+          "coordinates": {
+            "latitude": 27.712464,
+            "longitude": 85.315703
+          },
+          "sensorsId": 7712,
+          "locationsId": 3460
+        },
+        {
+          "datetime": {
+            "utc": "2025-03-24T14:15:00Z",
+            "local": "2025-03-24T20:00:00+05:45"
+          },
+          "value": 71.0,
+          "coordinates": {
+            "latitude": 27.712464,
+            "longitude": 85.315703
+          },
+          "sensorsId": 7711,
+          "locationsId": 3460
+        }
+      ]
+    },
+    "1236017": {
+      "meta": {
+        "name": "openaq-api",
+        "website": "/",
+        "page": 1,
+        "limit": 100,
+        "found": 6
+      },
+      "results": [
+        {
+          "datetime": {
+            "utc": "2025-01-13T23:00:00Z",
+            "local": "2025-01-14T04:45:00+05:45"
+          },
+          "value": 78.27381006876628,
+          "coordinates": {
+            "latitude": 27.727502,
+            "longitude": 85.330135
+          },
+          "sensorsId": 8462426,
+          "locationsId": 1236017
+        },
+        {
+          "datetime": {
+            "utc": "2025-01-13T23:00:00Z",
+            "local": "2025-01-14T04:45:00+05:45"
+          },
+          "value": 9946.678629557291,
+          "coordinates": {
+            "latitude": 27.727502,
+            "longitude": 85.330135
+          },
+          "sensorsId": 8462430,
+          "locationsId": 1236017
+        },
+        {
+          "datetime": {
+            "utc": "2025-01-13T23:00:00Z",
+            "local": "2025-01-14T04:45:00+05:45"
+          },
+          "value": 68.41666762034099,
+          "coordinates": {
+            "latitude": 27.727502,
+            "longitude": 85.330135
+          },
+          "sensorsId": 6530219,
+          "locationsId": 1236017
+        },
+        {
+          "datetime": {
+            "utc": "2025-01-13T23:00:00Z",
+            "local": "2025-01-14T04:45:00+05:45"
+          },
+          "value": 14.692857265472412,
+          "coordinates": {
+            "latitude": 27.727502,
+            "longitude": 85.330135
+          },
+          "sensorsId": 6530213,
+          "locationsId": 1236017
+        },
+        {
+          "datetime": {
+            "utc": "2025-01-13T23:00:00Z",
+            "local": "2025-01-14T04:45:00+05:45"
+          },
+          "value": 46.36071459452311,
+          "coordinates": {
+            "latitude": 27.727502,
+            "longitude": 85.330135
+          },
+          "sensorsId": 8462440,
+          "locationsId": 1236017
+        },
+        {
+          "datetime": {
+            "utc": "2025-01-13T23:00:00Z",
+            "local": "2025-01-14T04:45:00+05:45"
+          },
+          "value": 40.388094902038574,
+          "coordinates": {
+            "latitude": 27.727502,
+            "longitude": 85.330135
+          },
+          "sensorsId": 8462455,
+          "locationsId": 1236017
+        }
+      ]
+    }
+  }
+}
