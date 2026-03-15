@@ -3,6 +3,7 @@ __pycache__/
 *.pyc
 *.pyo
 *.pyd
+.python-version
 .DS_Store
 *.log
 .env
@@ -12,9 +13,18 @@ __pycache__/
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
+.ipynb_checkpoints/
+htmlcov/
+coverage.xml
+.coverage
+.coverage.*
 build/
 dist/
 
 # Frontend deps/build
 ktm-airwatch/node_modules/
 ktm-airwatch/dist/
+
+# IDE/editor
+.vscode/
+.idea/
