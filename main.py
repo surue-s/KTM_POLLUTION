@@ -1,14 +1,45 @@
 from datetime import datetime, timezone, timedelta
 from collections import defaultdict
+import json as json_lib
 import math
+import os
 
 import torch
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
 
-from data_pipeline import DataAggregator
+try:
+    from openai import AzureOpenAI
+    _OPENAI_IMPORT_OK = True
+except ImportError:
+    _OPENAI_IMPORT_OK = False
+
+from data_pipeline import DataAggregator, haversine_m
 from lstm_model import KTMAirLSTM, predict_next_48h, WINDOW
+
+# ---------------------------------------------------------------------------
+# Azure OpenAI configuration
+# ---------------------------------------------------------------------------
+AZURE_KEY = os.getenv("AZURE_OPENAI_API_KEY", "")
+# Set to your Azure OpenAI resource name (the subdomain in your endpoint URL):
+# e.g. https://MY-RESOURCE.openai.azure.com  →  AZURE_RESOURCE = "MY-RESOURCE"
+AZURE_RESOURCE = "YOUR_RESOURCE_NAME"           # <-- replace before use
+AZURE_DEPLOYMENT = "gpt-4o"                     # change if your deployment differs
+
+try:
+    if not _OPENAI_IMPORT_OK:
+        raise ImportError("openai package not installed")
+    ai_client = AzureOpenAI(
+        api_key=AZURE_KEY,
+        api_version="2024-02-01",
+        azure_endpoint=f"https://{AZURE_RESOURCE}.openai.azure.com/",
+    )
+    AI_AVAILABLE = True
+except Exception as _ai_exc:
+    print(f"Azure OpenAI not configured: {_ai_exc}")
+    ai_client = None
+    AI_AVAILABLE = False
 
 
 CACHE_TTL_SECONDS = 15 * 60
@@ -183,6 +214,129 @@ def _load_model() -> None:
         model_bundle["rmse"] = None
 
 
+# ---------------------------------------------------------------------------
+# AI helpers
+# ---------------------------------------------------------------------------
+
+def build_reasoning_prompt(dashboard_data: dict) -> str:
+    """Build a detailed Kathmandu air-quality reasoning prompt from dashboard data."""
+    zones = dashboard_data.get("zones", [])[:5]
+    weather = dashboard_data.get("weather", {})
+    fire_hotspots = dashboard_data.get("fire_hotspots", [])
+
+    zones_text = "\n".join([
+        f"- {z.get('zone_id','?')}: type={z.get('source_type','?')}, "
+        f"risk={z.get('risk_score',0):.0f}/100, "
+        f"PM2.5={z.get('avg_pm25',0):.1f}\u00b5g/m\u00b3, "
+        f"AQI={z.get('avg_aqi',0):.0f}, "
+        f"confidence={z.get('confidence',0)*100:.0f}%"
+        for z in zones
+    ])
+
+    fire_text = (
+        f"{len(fire_hotspots)} active fire/burn detections in valley"
+        if fire_hotspots
+        else "No active fire detections"
+    )
+    wind = weather.get("wind", {})
+
+    return f"""You are an air quality analyst for Kathmandu Valley, Nepal. Analyze this real-time pollution data and provide actionable intelligence for city authorities.
+
+CURRENT CONDITIONS:
+- Temperature: {weather.get('temperature', 'N/A')}\u00b0C
+- Humidity: {weather.get('humidity', 'N/A')}%
+- Wind: {wind.get('speed', 'N/A')} m/s from {wind.get('direction', 'N/A')}
+- Conditions: {weather.get('description', 'N/A')}
+- Fire detections: {fire_text}
+
+TOP POLLUTION ZONES:
+{zones_text}
+
+CONTEXT:
+- Kathmandu valley is a bowl surrounded by hills \u2014 inversions trap pollution
+- Brick kilns in Bhaktapur corridor are major PM2.5 sources (active Oct-May)
+- Morning rush 7-9am and evening rush 5-8pm drive NO2/CO spikes
+- Garbage burning happens mostly in peripheral wards at dusk
+- Monsoon (Jun-Sep) dramatically reduces pollution via rain washout
+
+Provide a JSON response with exactly this structure:
+{{
+  "situation_summary": "2-3 sentence plain English summary of current air quality situation",
+  "primary_threat": "single biggest pollution source right now and why",
+  "immediate_actions": ["action 1 for authorities", "action 2", "action 3"],
+  "24h_prediction": "what will happen in next 24 hours based on weather trend",
+  "water_tanker_priority": ["ward/area 1 - reason", "ward/area 2 - reason"],
+  "risk_level": "LOW|MODERATE|HIGH|CRITICAL",
+  "confidence": 0.0
+}}
+Return ONLY the JSON, no other text."""
+
+
+def build_zone_reasoning_prompt(
+    zone: dict,
+    nearby_stations: list,
+    weather: dict,
+    nearby_fires: list,
+) -> str:
+    """Build a zone-specific deep-dive prompt."""
+    stations_text = "\n".join([
+        f"  - {s.get('name','?')}: AQI={s.get('aqi','?')}, "
+        f"PM2.5={s.get('pm25','?')}\u00b5g/m\u00b3, "
+        f"PM10={s.get('pm10','?')}\u00b5g/m\u00b3, "
+        f"NO2={s.get('no2','?')}\u00b5g/m\u00b3"
+        for s in nearby_stations
+    ]) or "  No nearby stations with data"
+
+    fire_text = (
+        f"{len(nearby_fires)} fire/burn detections within 2 km "
+        f"(brightest: {max((f.get('brightness',0) for f in nearby_fires), default=0):.0f} K)"
+        if nearby_fires
+        else "No fire detections within 2 km"
+    )
+    wind = weather.get("wind", {})
+
+    return f"""You are a field operations analyst for Kathmandu's Air Quality Command Center.
+Conduct a deep-dive analysis of this specific pollution zone and return deployment-ready recommendations.
+
+ZONE PROFILE:
+- ID: {zone.get('zone_id','?')}
+- Type: {zone.get('source_type','?')}
+- Risk score: {zone.get('risk_score',0):.0f}/100
+- Confidence: {zone.get('confidence',0)*100:.0f}%
+- Coordinates: ({zone.get('lat','?')}, {zone.get('lon','?')})
+- Average PM2.5: {zone.get('avg_pm25',0):.1f} \u00b5g/m\u00b3
+- Average AQI: {zone.get('avg_aqi',0):.0f}
+- Station count: {zone.get('station_count',0)}
+- Fire hotspot nearby: {zone.get('fire_hotspot_nearby', False)}
+
+NEARBY MONITORING STATIONS (within 2 km):
+{stations_text}
+
+METEOROLOGY:
+- Temperature: {weather.get('temperature','N/A')}\u00b0C
+- Humidity: {weather.get('humidity','N/A')}%
+- Wind: {wind.get('speed','N/A')} m/s from {wind.get('direction','N/A')}
+- Conditions: {weather.get('description','N/A')}
+
+FIRE INTELLIGENCE (2 km radius):
+{fire_text}
+
+Return a JSON object with exactly this structure:
+{{
+  "cause_analysis": "Detailed explanation of what is causing elevated pollution in this specific zone",
+  "recommended_action": "Single most impactful enforcement/mitigation action",
+  "estimated_impact": "Expected AQI/PM2.5 reduction if action is taken (quantified estimate)",
+  "enforcement_priority": 7,
+  "suggested_tanker_routes": [
+    "Route 1: from X to Y via Z \u2014 rationale",
+    "Route 2: alternative approach"
+  ],
+  "secondary_actions": ["action a", "action b"],
+  "monitoring_recommendation": "What additional monitoring is needed here"
+}}
+Return ONLY the JSON, no other text."""
+
+
 def refresh_data(force: bool = False) -> None:
     ts = cache["timestamp"]
     if not force and ts is not None:
@@ -253,7 +407,8 @@ def get_source_zones():
     try:
         data = _ensure_cache()
         stations = data.get("stations", [])
-        zones = aggregator.identify_source_zones(stations)
+        fire_hotspots = data.get("fire_hotspots", [])
+        zones = aggregator.identify_source_zones(stations, fire_hotspots)
         zones = sorted(zones, key=lambda z: z.get("risk_score", 0), reverse=True)
         return {
             "zones": zones,
@@ -309,7 +464,13 @@ def get_dashboard():
         data = _ensure_cache()
         stations = data.get("stations", [])
         weather = data.get("weather", {})
-        zones = sorted(aggregator.identify_source_zones(stations), key=lambda z: z.get("risk_score", 0), reverse=True)
+        fire_hotspots = data.get("fire_hotspots", [])
+        elevation_data = data.get("elevation_grid", {})
+        zones = sorted(
+            aggregator.identify_source_zones(stations, fire_hotspots),
+            key=lambda z: z.get("risk_score", 0),
+            reverse=True,
+        )
         top_offenders = zones[:5]
 
         aqi_values = [float(s["aqi"]) for s in stations if s.get("aqi") is not None]
@@ -369,6 +530,11 @@ def get_dashboard():
             "stations": stations,
             "zones": zones,
             "weather": weather,
+            "open_meteo_weather": data.get("open_meteo_weather", {}),
+            "open_meteo_aqi_forecast": data.get("open_meteo_aqi_forecast", []),
+            "fire_hotspots": fire_hotspots,
+            "traffic_roads": data.get("traffic_roads", []),
+            "elevation_data": elevation_data,
             "top_offenders": top_offenders,
             "city_aqi_avg": city_aqi_avg,
             "forecast_summary": forecast_summary,
@@ -379,6 +545,135 @@ def get_dashboard():
         raise
     except Exception as exc:
         raise HTTPException(status_code=500, detail=f"Failed to build dashboard: {exc}")
+
+
+# ---------------------------------------------------------------------------
+# AI analysis endpoints
+# ---------------------------------------------------------------------------
+
+@app.get("/api/ai-analysis")
+async def get_ai_analysis():
+    """City-wide intelligent pollution analysis powered by Azure OpenAI."""
+    if not AI_AVAILABLE:
+        return {
+            "error": "Azure OpenAI not configured — set AZURE_RESOURCE in main.py",
+            "fallback": True,
+        }
+    try:
+        dashboard = get_dashboard()  # sync call — reuse existing logic
+        prompt = build_reasoning_prompt(dashboard)
+
+        response = ai_client.chat.completions.create(
+            model=AZURE_DEPLOYMENT,
+            messages=[
+                {
+                    "role": "system",
+                    "content": "You are a precise air quality analyst. Return only valid JSON.",
+                },
+                {"role": "user", "content": prompt},
+            ],
+            max_tokens=800,
+            temperature=0.3,
+        )
+
+        raw = response.choices[0].message.content.strip()
+        # Strip markdown code fences if model wraps response
+        if raw.startswith("```"):
+            raw = raw.split("\n", 1)[-1].rsplit("```", 1)[0].strip()
+
+        analysis = json_lib.loads(raw)
+        analysis["generated_at"] = datetime.utcnow().isoformat() + "Z"
+        analysis["model"] = AZURE_DEPLOYMENT
+        return analysis
+
+    except Exception as exc:
+        return {
+            "error": str(exc),
+            "situation_summary": "AI analysis temporarily unavailable.",
+            "risk_level": "UNKNOWN",
+            "fallback": True,
+        }
+
+
+@app.get("/api/ai-zone-analysis/{zone_id}")
+async def get_ai_zone_analysis(zone_id: str):
+    """Deep-dive AI analysis for a specific pollution zone."""
+    if not AI_AVAILABLE:
+        return {
+            "error": "Azure OpenAI not configured — set AZURE_RESOURCE in main.py",
+            "fallback": True,
+        }
+    try:
+        data = _ensure_cache()
+        stations = data.get("stations", [])
+        weather = data.get("weather", {})
+        fire_hotspots = data.get("fire_hotspots", [])
+
+        zones = aggregator.identify_source_zones(stations, fire_hotspots)
+        zone = next((z for z in zones if z.get("zone_id") == zone_id), None)
+        if zone is None:
+            raise HTTPException(status_code=404, detail=f"Zone '{zone_id}' not found")
+
+        zone_lat = zone.get("lat")
+        zone_lon = zone.get("lon")
+
+        # Stations within 2 km of zone centroid
+        nearby_stations: list = []
+        if zone_lat is not None and zone_lon is not None:
+            for s in stations:
+                slat, slon = s.get("lat"), s.get("lon")
+                if slat is None or slon is None:
+                    continue
+                if haversine_m(zone_lat, zone_lon, float(slat), float(slon)) <= 2000:
+                    nearby_stations.append(s)
+
+        # Fire hotspots within 2 km
+        nearby_fires: list = []
+        if zone_lat is not None and zone_lon is not None:
+            for f in fire_hotspots:
+                flat, flon = f.get("lat"), f.get("lon")
+                if flat is None or flon is None:
+                    continue
+                if haversine_m(zone_lat, zone_lon, float(flat), float(flon)) <= 2000:
+                    nearby_fires.append(f)
+
+        prompt = build_zone_reasoning_prompt(zone, nearby_stations, weather, nearby_fires)
+
+        response = ai_client.chat.completions.create(
+            model=AZURE_DEPLOYMENT,
+            messages=[
+                {
+                    "role": "system",
+                    "content": "You are a field operations analyst. Return only valid JSON.",
+                },
+                {"role": "user", "content": prompt},
+            ],
+            max_tokens=800,
+            temperature=0.3,
+        )
+
+        raw = response.choices[0].message.content.strip()
+        if raw.startswith("```"):
+            raw = raw.split("\n", 1)[-1].rsplit("```", 1)[0].strip()
+
+        analysis = json_lib.loads(raw)
+        analysis["zone_id"] = zone_id
+        analysis["generated_at"] = datetime.utcnow().isoformat() + "Z"
+        analysis["model"] = AZURE_DEPLOYMENT
+        analysis["nearby_station_count"] = len(nearby_stations)
+        analysis["nearby_fire_count"] = len(nearby_fires)
+        return analysis
+
+    except HTTPException:
+        raise
+    except Exception as exc:
+        return {
+            "zone_id": zone_id,
+            "error": str(exc),
+            "cause_analysis": "AI zone analysis temporarily unavailable.",
+            "enforcement_priority": 0,
+            "fallback": True,
+        }
 
 
 if __name__ == "__main__":

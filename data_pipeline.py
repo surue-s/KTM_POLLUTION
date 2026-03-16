@@ -18,6 +18,8 @@ Dependencies: requests, json, math, datetime, collections  (stdlib + requests)
 import json
 import math
 import time
+import csv
+import io
 import requests
 from datetime import datetime, timezone
 from collections import defaultdict
@@ -35,6 +37,12 @@ WAQI_BOUNDS_URL = (
 )
 WAQI_FEED_URL  = f"https://api.waqi.info/feed/@{{uid}}/?token={WAQI_TOKEN}"
 OWM_BASE       = "https://api.openweathermap.org/data/2.5"
+
+OPEN_METEO_FORECAST_URL = "https://api.open-meteo.com/v1/forecast"
+OPEN_METEO_AIR_URL = "https://air-quality-api.open-meteo.com/v1/air-quality"
+OPEN_METEO_ELEVATION_URL = "https://api.open-meteo.com/v1/elevation"
+OVERPASS_API_URL = "https://overpass-api.de/api/interpreter"
+NASA_FIRMS_MAP_KEY = "d6394a4ec078d3e86be8b2ffb5a1c5b4"
 
 # ── Spatial thresholds ────────────────────────────────────────────────────────
 DEDUP_RADIUS_M   = 500    # collapse two stations into one if closer than this
@@ -90,6 +98,264 @@ def now_iso() -> str:
 def _log(msg: str) -> None:
     ts = datetime.now(timezone.utc).strftime("%H:%M:%S")
     print(f"  [{ts}] {msg}")
+
+
+class FreeDataSources:
+    """No-API-key (or public key) data providers for weather, fires, roads and terrain."""
+
+    @staticmethod
+    def _get_json(url: str, params: dict = None, method: str = "GET", data: dict = None, timeout: int = 30):
+        try:
+            if method.upper() == "POST":
+                r = requests.post(url, params=params, data=data, timeout=timeout)
+            else:
+                r = requests.get(url, params=params, timeout=timeout)
+            r.raise_for_status()
+            return r.json()
+        except Exception as exc:
+            _log(f"free-source json fetch failed ({url}): {exc}")
+            return {}
+
+    @staticmethod
+    def _get_text(url: str, params: dict = None, timeout: int = 30):
+        try:
+            r = requests.get(url, params=params, timeout=timeout)
+            r.raise_for_status()
+            return r.text
+        except Exception as exc:
+            _log(f"free-source text fetch failed ({url}): {exc}")
+            return ""
+
+    @staticmethod
+    def _as_float(v):
+        try:
+            return float(v)
+        except (TypeError, ValueError):
+            return None
+
+    @staticmethod
+    def _extract_elevation(payload):
+        elev = payload.get("elevation")
+        if isinstance(elev, list):
+            for item in elev:
+                if item is not None:
+                    return FreeDataSources._as_float(item)
+            return None
+        return FreeDataSources._as_float(elev)
+
+    def fetch_open_meteo(self) -> dict:
+        weather_params = {
+            "latitude": 27.7172,
+            "longitude": 85.3240,
+            "hourly": "temperature_2m,relativehumidity_2m,windspeed_10m,winddirection_10m,precipitation,visibility,surface_pressure",
+            "forecast_days": 3,
+            "timezone": "Asia/Kathmandu",
+        }
+        air_params = {
+            "latitude": 27.7172,
+            "longitude": 85.3240,
+            "hourly": "pm10,pm2_5,carbon_monoxide,nitrogen_dioxide,ozone,dust",
+            "forecast_days": 3,
+            "timezone": "Asia/Kathmandu",
+        }
+
+        weather_raw = self._get_json(OPEN_METEO_FORECAST_URL, params=weather_params)
+        air_raw = self._get_json(OPEN_METEO_AIR_URL, params=air_params)
+
+        hourly_w = weather_raw.get("hourly") or {}
+        hourly_a = air_raw.get("hourly") or {}
+
+        weather_times = (hourly_w.get("time") or [])[:72]
+        weather_forecast = []
+        for idx, ts in enumerate(weather_times):
+            weather_forecast.append({
+                "time": ts,
+                "temperature_2m": (hourly_w.get("temperature_2m") or [None] * len(weather_times))[idx],
+                "relativehumidity_2m": (hourly_w.get("relativehumidity_2m") or [None] * len(weather_times))[idx],
+                "windspeed_10m": (hourly_w.get("windspeed_10m") or [None] * len(weather_times))[idx],
+                "winddirection_10m": (hourly_w.get("winddirection_10m") or [None] * len(weather_times))[idx],
+                "precipitation": (hourly_w.get("precipitation") or [None] * len(weather_times))[idx],
+                "visibility": (hourly_w.get("visibility") or [None] * len(weather_times))[idx],
+                "surface_pressure": (hourly_w.get("surface_pressure") or [None] * len(weather_times))[idx],
+            })
+
+        air_times = (hourly_a.get("time") or [])[:72]
+        aqi_forecast = []
+        for idx, ts in enumerate(air_times):
+            aqi_forecast.append({
+                "time": ts,
+                "pm10": (hourly_a.get("pm10") or [None] * len(air_times))[idx],
+                "pm2_5": (hourly_a.get("pm2_5") or [None] * len(air_times))[idx],
+                "carbon_monoxide": (hourly_a.get("carbon_monoxide") or [None] * len(air_times))[idx],
+                "nitrogen_dioxide": (hourly_a.get("nitrogen_dioxide") or [None] * len(air_times))[idx],
+                "ozone": (hourly_a.get("ozone") or [None] * len(air_times))[idx],
+                "dust": (hourly_a.get("dust") or [None] * len(air_times))[idx],
+            })
+
+        current_weather = weather_forecast[0] if weather_forecast else {}
+
+        return {
+            "current_weather": current_weather,
+            "72h_weather_forecast": weather_forecast,
+            "72h_aqi_forecast": aqi_forecast,
+        }
+
+    def fetch_nasa_firms_fire_data(self) -> list:
+        url = (
+            "https://firms.modaps.eosdis.nasa.gov/api/area/csv/"
+            f"{NASA_FIRMS_MAP_KEY}/VIIRS_SNPP_NRT/85.2,27.6,85.5,27.8/1"
+        )
+        raw_csv = self._get_text(url, timeout=45)
+        if not raw_csv.strip():
+            return []
+
+        rows = []
+        try:
+            reader = csv.DictReader(io.StringIO(raw_csv))
+            for row in reader:
+                lat = self._as_float(row.get("latitude"))
+                lon = self._as_float(row.get("longitude"))
+                if lat is None or lon is None:
+                    continue
+                acq_date = (row.get("acq_date") or "").strip()
+                acq_time = (row.get("acq_time") or "").strip().zfill(4)
+                dt = None
+                if acq_date:
+                    dt = f"{acq_date}T{acq_time[:2]}:{acq_time[2:]}:00Z"
+
+                rows.append({
+                    "lat": lat,
+                    "lon": lon,
+                    "brightness": self._as_float(row.get("bright_ti4") or row.get("brightness")),
+                    "confidence": self._as_float(row.get("confidence")) or row.get("confidence"),
+                    "frp": self._as_float(row.get("frp")),
+                    "datetime": dt,
+                })
+        except Exception as exc:
+            _log(f"NASA FIRMS parse failed: {exc}")
+            return []
+
+        return rows
+
+    def fetch_overpass_traffic_roads(self) -> list:
+        query = (
+            "[out:json][timeout:25];"
+            "way[\"highway\"~\"primary|secondary|trunk\"](27.65,85.22,27.78,85.48);"
+            "out geom;"
+        )
+        payload = self._get_json(OVERPASS_API_URL, method="POST", data={"data": query}, timeout=45)
+        elements = payload.get("elements") or []
+
+        roads = []
+        for element in elements:
+            if element.get("type") != "way":
+                continue
+            tags = element.get("tags") or {}
+            geom = element.get("geometry") or []
+            coords = [[pt.get("lon"), pt.get("lat")] for pt in geom if pt.get("lat") is not None and pt.get("lon") is not None]
+            if len(coords) < 2:
+                continue
+            roads.append({
+                "name": tags.get("name") or f"way-{element.get('id')}",
+                "road_type": tags.get("highway") or "unknown",
+                "coords": coords,
+                "_score": len(coords),
+            })
+
+        roads.sort(key=lambda r: r.get("_score", 0), reverse=True)
+        top = roads[:20]
+        for row in top:
+            row.pop("_score", None)
+        return top
+
+    def fetch_copernicus_sentinel5p(self) -> dict:
+        # Open-Meteo air-quality endpoint is backed by Copernicus atmospheric products.
+        air_params = {
+            "latitude": 27.7172,
+            "longitude": 85.3240,
+            "hourly": "pm10,pm2_5,carbon_monoxide,nitrogen_dioxide,ozone,dust",
+            "forecast_days": 3,
+            "timezone": "Asia/Kathmandu",
+        }
+        uv_params = {
+            "latitude": 27.7172,
+            "longitude": 85.3240,
+            "daily": "uv_index_max",
+            "timezone": "Asia/Kathmandu",
+        }
+
+        air_raw = self._get_json(OPEN_METEO_AIR_URL, params=air_params)
+        uv_raw = self._get_json(OPEN_METEO_FORECAST_URL, params=uv_params)
+
+        uv_daily = []
+        daily = uv_raw.get("daily") or {}
+        times = daily.get("time") or []
+        uv_vals = daily.get("uv_index_max") or []
+        for idx, day in enumerate(times):
+            uv_daily.append({
+                "date": day,
+                "uv_index_max": uv_vals[idx] if idx < len(uv_vals) else None,
+            })
+
+        return {
+            "note": "Copernicus Sentinel-5P-derived fields are available via Open-Meteo air-quality API.",
+            "aqi_hourly": (air_raw.get("hourly") or {}),
+            "uv_index_daily": uv_daily,
+        }
+
+    def fetch_elevation_data(self) -> dict:
+        center_payload = self._get_json(
+            OPEN_METEO_ELEVATION_URL,
+            params={"latitude": 27.7172, "longitude": 85.3240},
+        )
+        center_elev = self._extract_elevation(center_payload)
+
+        lat_values = [round(27.65 + i * 0.02, 2) for i in range(7)]
+        lon_values = [round(85.22 + j * 0.02, 2) for j in range(14)]
+
+        grid = []
+        for lat in lat_values:
+            for lon in lon_values:
+                payload = self._get_json(
+                    OPEN_METEO_ELEVATION_URL,
+                    params={"latitude": lat, "longitude": lon},
+                )
+                elev = self._extract_elevation(payload)
+                grid.append([lat, lon, elev])
+                time.sleep(0.03)
+
+        point_map = {(pt[0], pt[1]): pt[2] for pt in grid}
+        trap_zones = []
+        for lat in lat_values:
+            for lon in lon_values:
+                current = point_map.get((lat, lon))
+                if current is None:
+                    continue
+                neighbor_vals = []
+                for dlat in (-0.02, 0.0, 0.02):
+                    for dlon in (-0.02, 0.0, 0.02):
+                        if dlat == 0 and dlon == 0:
+                            continue
+                        candidate = (round(lat + dlat, 2), round(lon + dlon, 2))
+                        elev = point_map.get(candidate)
+                        if elev is not None:
+                            neighbor_vals.append(elev)
+                if not neighbor_vals:
+                    continue
+                neighbor_mean = sum(neighbor_vals) / len(neighbor_vals)
+                if neighbor_mean - current >= 20:
+                    trap_zones.append({
+                        "lat": lat,
+                        "lon": lon,
+                        "elevation": current,
+                        "surrounding_avg_elevation": round(neighbor_mean, 2),
+                    })
+
+        return {
+            "valley_center_elevation": center_elev,
+            "elevation_grid": grid,
+            "pollution_trap_zones": trap_zones,
+        }
 
 
 # ── Source-type classification ─────────────────────────────────────────────────
@@ -153,6 +419,9 @@ class DataAggregator:
     Fetch, normalise, deduplicate and zone-classify air quality data
     for the Kathmandu Valley from OpenAQ, WAQI and OpenWeatherMap.
     """
+
+    def __init__(self):
+        self.free_sources = FreeDataSources()
 
     # ── Internal fetch helpers ─────────────────────────────────────────────────
 
@@ -519,10 +788,25 @@ class DataAggregator:
         removed      = len(all_stations) - len(deduplicated)
         _log(f"Deduplication: removed {removed} duplicate(s) → {len(deduplicated)} unique station(s)")
 
+        open_meteo_bundle = self.free_sources.fetch_open_meteo()
+        fire_hotspots = self.free_sources.fetch_nasa_firms_fire_data()
+        traffic_roads = self.free_sources.fetch_overpass_traffic_roads()
+        copernicus_bundle = self.free_sources.fetch_copernicus_sentinel5p()
+        elevation_bundle = self.free_sources.fetch_elevation_data()
+
         return {
             "stations": deduplicated,
             "weather":  owm_data["weather"],
             "forecast": owm_data["forecast_entries"],
+            "open_meteo_weather": {
+                "current_weather": open_meteo_bundle.get("current_weather", {}),
+                "72h_weather_forecast": open_meteo_bundle.get("72h_weather_forecast", []),
+                "uv_index_max_daily": copernicus_bundle.get("uv_index_daily", []),
+            },
+            "open_meteo_aqi_forecast": open_meteo_bundle.get("72h_aqi_forecast", []),
+            "fire_hotspots": fire_hotspots,
+            "traffic_roads": traffic_roads,
+            "elevation_grid": elevation_bundle,
             "meta": {
                 "fetched_at":          now_iso(),
                 "openaq_raw_count":    len(openaq_stations),
@@ -531,13 +815,17 @@ class DataAggregator:
                 "deduplicated_count":  len(deduplicated),
                 "owm_forecast_steps":  len(owm_data["forecast_entries"]),
                 "owm_current_aqi":     owm_data["air_pollution"]["aqi_owm"],
+                "open_meteo_forecast_steps": len(open_meteo_bundle.get("72h_weather_forecast", [])),
+                "fire_hotspots_count": len(fire_hotspots),
+                "traffic_roads_count": len(traffic_roads),
+                "elevation_grid_count": len(elevation_bundle.get("elevation_grid", [])),
             },
             "_owm_raw": owm_data["_raw"],
         }
 
     # ── Public: identify_source_zones ─────────────────────────────────────────
 
-    def identify_source_zones(self, stations: list) -> list:
+    def identify_source_zones(self, stations: list, fire_hotspots: list = None) -> list:
         """
         Groups stations into pollution clusters (3 km radius) and
         classifies each cluster's dominant emission source.
@@ -820,6 +1108,41 @@ class DataAggregator:
                     break
                 if not any(z.get("zone_id") == sz.get("zone_id") for z in blended):
                     blended.append(dict(sz))
+
+        # Cross-reference NASA FIRMS active fire hotspots (within 1km of zone center).
+        hotpoints = fire_hotspots or []
+        for zone in blended:
+            best_hotspot = None
+            best_dist = None
+            for hotspot in hotpoints:
+                hlat = _to_num(hotspot.get("lat"))
+                hlon = _to_num(hotspot.get("lon"))
+                if hlat is None or hlon is None:
+                    continue
+                dist_m = haversine_m(zone["center_lat"], zone["center_lon"], hlat, hlon)
+                if best_dist is None or dist_m < best_dist:
+                    best_dist = dist_m
+                    best_hotspot = hotspot
+
+            if best_hotspot is not None and best_dist is not None and best_dist <= 1000:
+                hotspot_conf = best_hotspot.get("confidence")
+                conf_value = _to_num(hotspot_conf)
+                fire_type = "biomass_burning" if (conf_value is not None and conf_value >= 80) else "garbage_burning"
+                zone["source_type"] = fire_type
+                zone["confidence"] = round(min(1.0, max(zone.get("confidence", 0.0), 0.9)), 4)
+                zone["risk_score"] = round(min(100.0, (zone.get("risk_score") or 0) + 8.0), 2)
+                zone["fire_hotspot_nearby"] = True
+                zone["fire_hotspot_distance_m"] = round(best_dist, 1)
+                zone["fire_hotspot"] = {
+                    "lat": best_hotspot.get("lat"),
+                    "lon": best_hotspot.get("lon"),
+                    "brightness": best_hotspot.get("brightness"),
+                    "confidence": best_hotspot.get("confidence"),
+                    "frp": best_hotspot.get("frp"),
+                    "datetime": best_hotspot.get("datetime"),
+                }
+            else:
+                zone["fire_hotspot_nearby"] = False
 
         return blended
 

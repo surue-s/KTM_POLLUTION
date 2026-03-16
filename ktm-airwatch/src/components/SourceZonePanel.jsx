@@ -70,7 +70,7 @@ export default function SourceZonePanel({
   const sortedZones = [...(zones ?? [])].sort((a, b) => (b.risk_score ?? 0) - (a.risk_score ?? 0))
 
   return (
-    <aside className="side-panel">
+    <aside className="side-panel" style={{ height: 'auto', minHeight: '100%' }}>
       {/* ── Pollution Sources ── */}
       <div className="panel-section">
         <div className="panel-section-title">

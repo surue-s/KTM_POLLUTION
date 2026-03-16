@@ -2,12 +2,14 @@ import React, { useState, useEffect, useCallback, useRef } from 'react'
 import TopBar from './components/TopBar'
 import SourceZonePanel from './components/SourceZonePanel'
 import DeckMap from './components/DeckMap'
+import MapControls from './components/MapControls'
 import ZoneExplanation from './components/ZoneExplanation'
 
 const API_BASE = 'http://localhost:8000/api'
 const REFRESH_INTERVAL = 15 * 60 * 1000 // 15 minutes
 const TOAST_TTL_MS = 8 * 1000
 const FETCH_TIMEOUT_MS = 15000
+const DEFAULT_BASEMAP_URL = 'https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json'
 
 async function fetchWithTimeout(url, timeoutMs = FETCH_TIMEOUT_MS) {
   const controller = new AbortController()
@@ -64,6 +66,15 @@ function Dashboard() {
   const [nextRefreshAt, setNextRefreshAt] = useState(null)
   const [countdownSeconds, setCountdownSeconds] = useState(0)
   const [toasts, setToasts] = useState([])
+  const [basemapUrl, setBasemapUrl] = useState(DEFAULT_BASEMAP_URL)
+  const [layerVisibility, setLayerVisibility] = useState({
+    stations: true,
+    zones: true,
+    zoneLabels: true,
+    uploaded: true,
+  })
+  const [aqiThreshold, setAqiThreshold] = useState(0)
+  const [uploadedData, setUploadedData] = useState(null)
   const autoRefreshRef = useRef(null)
   const recentCriticalRef = useRef(new Map())
 
@@ -194,6 +205,10 @@ function Dashboard() {
     setExplanationOpen(false)
   }, [])
 
+  const handleLayerVisibilityChange = useCallback((partial) => {
+    setLayerVisibility((prev) => ({ ...prev, ...partial }))
+  }, [])
+
   if (loading) {
     return (
       <div className="app-loading">
@@ -242,31 +257,49 @@ function Dashboard() {
 
   return (
     <div className="app-root">
-      <TopBar
-        cityAqi={cityAqi}
-        weather={weather}
-        lastUpdate={lastUpdate}
-        onRefresh={handleRefresh}
-        refreshing={refreshing}
-        error={error}
-        countdownSeconds={countdownSeconds}
-      />
-      <div className="app-body">
-        <SourceZonePanel
-          zones={zones}
-          stations={stations}
-          alerts={alerts}
-          apiStatus={apiStatus}
-          forecast={forecast}
-          selectedZone={selectedZone}
-          onZoneSelect={handleZoneSelect}
+      <div className="app-header">
+        <TopBar
+          cityAqi={cityAqi}
+          weather={weather}
           lastUpdate={lastUpdate}
+          onRefresh={handleRefresh}
+          refreshing={refreshing}
+          error={error}
+          countdownSeconds={countdownSeconds}
         />
-        <div className="map-container">
+      </div>
+      <div className="app-body">
+        <div className="left-rail">
+          <SourceZonePanel
+            zones={zones}
+            stations={stations}
+            alerts={alerts}
+            apiStatus={apiStatus}
+            forecast={forecast}
+            selectedZone={selectedZone}
+            onZoneSelect={handleZoneSelect}
+            lastUpdate={lastUpdate}
+          />
+          <MapControls
+            basemapUrl={basemapUrl}
+            onBasemapChange={setBasemapUrl}
+            layerVisibility={layerVisibility}
+            onLayerVisibilityChange={handleLayerVisibilityChange}
+            aqiThreshold={aqiThreshold}
+            onAqiThresholdChange={setAqiThreshold}
+            uploadedData={uploadedData}
+            onUploadedDataChange={setUploadedData}
+          />
+        </div>
+        <div className="map-container" style={{ position: 'relative', flex: 1, overflow: 'hidden' }}>
           <DeckMap
             stations={stations}
             zones={zones}
             onZoneClick={handleZoneSelect}
+            basemapUrl={basemapUrl}
+            layerVisibility={layerVisibility}
+            aqiThreshold={aqiThreshold}
+            uploadedData={uploadedData}
           />
         </div>
       </div>
