@@ -24,8 +24,8 @@ from lstm_model import KTMAirLSTM, predict_next_48h, WINDOW
 AZURE_KEY = os.getenv("AZURE_OPENAI_API_KEY", "")
 # Set to your Azure OpenAI resource name (the subdomain in your endpoint URL):
 # e.g. https://MY-RESOURCE.openai.azure.com  →  AZURE_RESOURCE = "MY-RESOURCE"
-AZURE_RESOURCE = "YOUR_RESOURCE_NAME"           # <-- replace before use
-AZURE_DEPLOYMENT = "gpt-4o"                     # change if your deployment differs
+AZURE_RESOURCE = os.getenv("AZURE_OPENAI_RESOURCE", "YOUR_RESOURCE_NAME")
+AZURE_DEPLOYMENT = os.getenv("AZURE_OPENAI_DEPLOYMENT", "gpt-4o")
 
 try:
     if not _OPENAI_IMPORT_OK:
@@ -556,7 +556,7 @@ async def get_ai_analysis():
     """City-wide intelligent pollution analysis powered by Azure OpenAI."""
     if not AI_AVAILABLE:
         return {
-            "error": "Azure OpenAI not configured — set AZURE_RESOURCE in main.py",
+            "error": "Azure OpenAI not configured — set AZURE_OPENAI_API_KEY and AZURE_OPENAI_RESOURCE",
             "fallback": True,
         }
     try:
@@ -600,7 +600,7 @@ async def get_ai_zone_analysis(zone_id: str):
     """Deep-dive AI analysis for a specific pollution zone."""
     if not AI_AVAILABLE:
         return {
-            "error": "Azure OpenAI not configured — set AZURE_RESOURCE in main.py",
+            "error": "Azure OpenAI not configured — set AZURE_OPENAI_API_KEY and AZURE_OPENAI_RESOURCE",
             "fallback": True,
         }
     try:

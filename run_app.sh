@@ -25,6 +25,13 @@ kill_port() {
 
 echo "[run_app] Project root: $ROOT_DIR"
 
+if [ -f "$ROOT_DIR/.env" ]; then
+  echo "[run_app] Loading environment from .env"
+  set -a
+  source "$ROOT_DIR/.env"
+  set +a
+fi
+
 kill_port "$BACKEND_PORT"
 kill_port "$FRONTEND_PORT"
 
